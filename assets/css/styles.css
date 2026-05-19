@@ -865,3 +865,160 @@ h4 { font-size: var(--type-h4); }
   color: var(--color-accent);
 }
 .section-dark .big-quote { color: #fff; }
+
+
+/* ============================================================
+   Iteration 3 — Nelson's feedback round 2
+   ============================================================ */
+
+/* Footer logo should turn yellow on hover (same as top) */
+.site-footer .site-logo:hover img {
+  filter: invert(74%) sepia(70%) saturate(2200%) hue-rotate(2deg) brightness(106%) contrast(102%) !important;
+}
+
+/* Tighter spacing around the big mantra quote on /author */
+.big-quote {
+  margin: clamp(24px, 4vw, 40px) auto !important;
+}
+.big-quote::before, .big-quote::after {
+  margin: 16px auto !important;
+}
+/* Comillas decoration around the mantra */
+.mantra-wrap {
+  position: relative;
+  padding: clamp(40px, 6vw, 64px) clamp(24px, 6vw, 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mantra-wrap img.comillas {
+  width: clamp(64px, 10vw, 120px);
+  height: auto;
+  opacity: 0.92;
+  flex: 0 0 auto;
+}
+.mantra-wrap img.comillas-left { transform: scaleX(1); margin-right: clamp(12px, 2vw, 24px); }
+.mantra-wrap img.comillas-right { transform: scaleX(-1); margin-left: clamp(12px, 2vw, 24px); }
+.mantra-wrap .big-quote { margin: 0 !important; }
+.mantra-wrap .big-quote::before, .mantra-wrap .big-quote::after { display: none; }
+@media (max-width: 600px) {
+  .mantra-wrap img.comillas { width: 48px; }
+}
+
+/* Honeypot anywhere on the site (not just inside .form) */
+.honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Hyperlink with yellow underline highlight (use anywhere) */
+.link-yellow {
+  color: var(--color-ink);
+  background-image: linear-gradient(transparent 60%, var(--color-accent) 60%);
+  background-size: 100% 100%;
+  padding: 0 2px;
+  font-weight: 700;
+  transition: background-size var(--t), color var(--t);
+}
+.link-yellow:hover {
+  color: #000;
+  background-image: linear-gradient(var(--color-accent), var(--color-accent));
+}
+
+/* Spanish section: 3 overlays + main book */
+.es-stack__top-right {
+  position: absolute;
+  top: -8%; right: -10%;
+  width: 38%;
+  z-index: 3;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+  transform: rotate(3deg);
+}
+.es-stack__bottom-left {
+  position: absolute;
+  bottom: -10%; left: -10%;
+  width: 42%;
+  z-index: 3;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+  transform: rotate(-3deg);
+}
+@media (max-width: 700px) {
+  .es-stack__top-right { width: 32%; right: -4%; }
+  .es-stack__bottom-left { width: 36%; left: -4%; }
+}
+
+/* Featured-on logo grid: 4 + 3 with proper spacing and links */
+.featured-on-wrap {
+  margin-top: clamp(48px, 6vw, 72px);
+}
+.featured-on-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 36px 48px;
+  align-items: center;
+  justify-items: center;
+  max-width: 920px;
+  margin-inline: auto;
+}
+.featured-on-grid--bottom {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 720px;
+  margin-top: 24px;
+}
+.featured-on-grid a img {
+  height: 32px;
+  width: auto;
+  opacity: 0.85;
+  filter: brightness(0) invert(1);
+  transition: opacity var(--t), transform var(--t);
+}
+.featured-on-grid a:hover img { opacity: 1; transform: scale(1.05); }
+@media (max-width: 700px) {
+  .featured-on-grid, .featured-on-grid--bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 24px;
+    max-width: 380px;
+  }
+}
+
+/* Hero image for insights pages (megatrends / takeaways) */
+.insights-hero-image {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto clamp(32px, 5vw, 56px);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  display: block;
+}
+
+/* Fans video block (reused below reviews) */
+.fans-video {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-night);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.fans-video video {
+  width: 100%;
+  display: block;
+}
+.fans-video .fans-video__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(10,10,10,0.65) 100%);
+  pointer-events: none;
+}
+
+/* Make sure yt-thumb is clickable everywhere */
+.yt-thumb, .yt-embed { cursor: pointer; }
+.yt-thumb * { pointer-events: none; }  /* Ensure click reaches the thumb wrapper */
+.yt-thumb::after, .yt-thumb::before { pointer-events: none; }
