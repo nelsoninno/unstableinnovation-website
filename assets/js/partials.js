@@ -32,7 +32,7 @@ window.renderHeader = function () {
     +     '<a href="' + p + '" class="site-logo" aria-label="Unstable Innovation Home">'
     +       '<img src="' + p + 'assets/images/og/unstable-innovation-logo-vector-nelson-inno.svg" alt="" width="38" height="38">'
     +       
-    +     '</a>'
+    '</a>'
     +     '<button class="menu-toggle" aria-label="Open menu" aria-expanded="false">'
     +       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>'
     +     '</button>'
@@ -63,7 +63,7 @@ window.renderFooter = function () {
     +         '<a href="' + p + '" class="site-logo" style="color:#fff">'
     +           '<img src="' + p + 'assets/images/og/unstable-innovation-logo-vector-nelson-inno.svg" alt="" width="38" height="38" style="filter:brightness(0) invert(1)">'
     +           
-    +         '</a>'
+    '</a>'
     +         '<p style="margin-top:16px;max-width:36ch;color:#a8a8a8;font-size:14px;">A book about innovation, entrepreneurship, and philosophy by Nelson Inno. Published by WeSpark.</p>'
     +       '</div>'
     +       '<div>'
