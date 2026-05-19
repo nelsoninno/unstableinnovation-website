@@ -74,4 +74,71 @@
   <div class="container container-narrow">
     <div class="step">
       <div class="step__number">2</div>
-      <h2>
+Tell Nelson who you are</h2>
+      <p>Where should we send the book? You'll get one email per month (max) with innovation tips. Unsubscribe in one click anytime.</p>
+    </div>
+
+    <form id="book-request-form" class="form" novalidate style="margin-top:24px;">
+
+      <div>
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="name@example.com">
+      </div>
+
+      <div>
+        <label for="first_name">First name *</label>
+        <input id="first_name" name="first_name" type="text" required autocomplete="given-name" placeholder="Your first name">
+      </div>
+
+      <fieldset>
+        <legend>What is your role in this world?</legend>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="role" value="Learner"> Learner</label>
+          <label><input type="checkbox" name="role" value="Entrepreneur"> Entrepreneur</label>
+          <label><input type="checkbox" name="role" value="Innovator"> Innovator</label>
+          <label><input type="checkbox" name="role" value="Other"> Other</label>
+        </div>
+      </fieldset>
+
+      <label class="consent">
+        <input type="checkbox" name="linkedin_followed" required>
+        <span>I followed Nelson on <a href="https://www.linkedin.com/in/nelsoninno/" rel="noopener" target="_blank">LinkedIn</a>. <em>(Required)</em></span>
+      </label>
+
+      <label class="consent">
+        <input type="checkbox" name="newsletter_consent" required>
+        <span>Yes, subscribe me to <strong>Spark News</strong> &mdash; maximum one email per month. <em>(Required)</em></span>
+      </label>
+
+      <input type="text" name="company" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="form-message" role="status"></div>
+
+      <button type="submit" class="btn btn-lg">Send me the eBook</button>
+
+      <p class="text-muted" style="font-size:13px; text-align:center; margin:0;">Your email is stored securely with <a href="https://kit.com" rel="noopener">Kit</a> (formerly ConvertKit). No spam, no sharing with third parties.</p>
+    </form>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container container-narrow">
+    <div class="step">
+      <div class="step__number">3</div>
+      <h2>Read &amp; enjoy</h2>
+      <p>After you submit, you'll be sent to the download page with the PDF, EPUB and Kindle files. Read with a pen, mark what surprises you, and &mdash; if you like it &mdash; leave a short review on Amazon to help the book reach the next reader.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight" style="background: var(--color-card);">
+  <div class="container container-narrow text-center">
+    <p class="lead"><strong>Already a subscriber?</strong> <a href="../thank-you/">Skip to the download page &rarr;</a></p>
+  </div>
+</section>
+
+<div id="site-footer-mount"></div>
+<script src="../assets/js/partials.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
