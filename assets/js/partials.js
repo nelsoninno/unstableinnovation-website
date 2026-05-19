@@ -22,6 +22,19 @@
   window.PATH_PREFIX = computePrefix();
 })();
 
+
+window.playYT = function (el, id, extra) {
+  var iframe = document.createElement('iframe');
+  iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1&playsinline=1' + (extra || '');
+  iframe.title = 'YouTube video player';
+  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+  iframe.allowFullscreen = true;
+  iframe.frameBorder = 0;
+  iframe.style.cssText = 'width:100%;height:100%;border:0;position:absolute;inset:0;';
+  el.parentNode.replaceChild(iframe, el);
+};
+
 window.renderHeader = function () {
   var p = window.PATH_PREFIX || "./";
   var el = document.getElementById("site-header-mount");

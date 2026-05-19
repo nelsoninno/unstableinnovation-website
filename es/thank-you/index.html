@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gracias — Descarga Innovación Inestable</title>
+<meta name="description" content="Gracias por suscribirte. Descarga Innovación Inestable por Nelson Inno como PDF, EPUB o Kindle.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/x-icon" href="../../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32-unstable-innovation-nelson-inno.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon-unstable-innovation-nelson-inno.png">
+<link rel="stylesheet" href="../../assets/css/styles.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+html[lang="es"] h1, html[lang="es"] h2, html[lang="es"] h3, html[lang="es"] .btn, html[lang="es"] .eyebrow { font-family: 'Unstable', 'Anton', 'Bebas Neue', sans-serif; }
+html[lang="es"] .spanish-fallback { font-family: 'Anton', 'Bebas Neue', sans-serif; }
+.download-card { background:#fff; border:2px solid var(--color-ink); border-radius:var(--radius-md); padding:24px; display:flex; gap:20px; align-items:center; transition: all var(--t); }
+.download-card:hover { background: var(--color-accent-soft); }
+.download-card__icon { font-family: var(--font-display); font-size:32px; flex:0 0 64px; text-align:center; }
+.download-card__body { flex:1; }
+.download-card__body strong { font-size:18px; }
+.download-card__body p { margin:4px 0 0; color: var(--color-ink-soft); font-size:14px; }
+</style>
+</head>
+<body>
+<div id="site-header-mount"></div>
+
+<section class="page-hero">
+  <div class="container container-narrow">
+    <span class="eyebrow">Listo</span>
+    <h1 class="spanish-fallback">¡Gracias<span data-greeting style="display:none"></span>!</h1>
+    <p>Bienvenido a Spark News. Abajo tienes tus descargas en tres formatos &mdash; elige el que mejor funcione para tu dispositivo.</p>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container container-narrow">
+    <div class="stack-sm">
+      <a class="download-card" href="../../files/es/innovacion-inestable-nelson-inno.pdf" download>
+        <div class="download-card__icon spanish-fallback">PDF</div>
+        <div class="download-card__body">
+          <strong>Innovación Inestable — PDF</strong>
+          <p>Se abre en cualquier dispositivo. Perfecto para leer en computadora o tablet.</p>
+        </div>
+        <span class="btn">Descargar</span>
+      </a>
+      <a class="download-card" href="../../files/es/innovacion-inestable-nelson-inno.epub" download>
+        <div class="download-card__icon spanish-fallback">EPUB</div>
+        <div class="download-card__body">
+          <strong>Innovación Inestable — EPUB</strong>
+          <p>Mejor para e-readers (Kobo, Apple Books, etc.) y apps de lectura.</p>
+        </div>
+        <span class="btn">Descargar</span>
+      </a>
+      <a class="download-card" href="../../files/es/innovacion-inestable-nelson-inno.azw3" download>
+        <div class="download-card__icon spanish-fallback">AZW3</div>
+        <div class="download-card__body">
+          <strong>Innovación Inestable — Kindle</strong>
+          <p>Para dispositivos Amazon Kindle. Envíalo con "Send-to-Kindle".</p>
+        </div>
+        <span class="btn">Descargar</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container-narrow">
+    <h2 class="spanish-fallback">¿Qué sigue?</h2>
+    <p class="lead">Algunas ideas para sacarle más al libro.</p>
+    <ol class="prose-links">
+      <li><strong>Lee con un lápiz.</strong> Marca los momentos que te sorprendan. El libro está hecho para discutirse.</li>
+      <li><strong>Prueba las <a href="../insights/practical-applications/">aplicaciones prácticas</a></strong> en cada capítulo — son ejercicios cortos, no teoría.</li>
+      <li><strong>Si te resulta útil, deja una reseña en <a href="https://geni.us/UnstableInnovation" rel="noopener">Amazon</a></strong>. Para libros independientes, tu reseña es la palanca más grande para llegar al siguiente lector.</li>
+      <li><strong>Sigue a Nelson en <a href="https://www.linkedin.com/in/nelsoninno/" rel="noopener">LinkedIn</a></strong> — es donde publica la versión sin filtros de lo que está construyendo.</li>
+    </ol>
+  </div>
+</section>
+
+<div id="site-footer-mount"></div>
+<script src="../../assets/js/partials.js?v=4" defer></script>
+<script src="../../assets/js/main.js?v=4" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var el = document.querySelector('[data-greeting]');
+    if (!el) return;
+    var n = new URLSearchParams(location.search).get('name');
+    if (n) { el.style.display = 'inline'; el.textContent = ', ' + n.replace(/[<>]/g,'').slice(0,40); }
+  });
+</script>
+</body>
+</html>
