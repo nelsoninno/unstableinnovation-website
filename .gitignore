@@ -1,0 +1,152 @@
+# ============================================================
+# Security — NEVER commit these
+# ============================================================
+*.env
+*.env.local
+.env*
+*token*
+*secret*
+*.pem
+*.key
+*credentials*
+github_pat_*
+.kit-form-id
+config.json
+
+# OS / IDE noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# ============================================================
+# Original raster image files (we use SEO-renamed WebPs instead)
+# ============================================================
+
+# Book covers - keep only the renamed versions
+assets/images/book-covers/Unstable Innovation - Front Cover.png
+assets/images/book-covers/Unstable Innovation - Front Cover-enhanced.png
+assets/images/book-covers/Unstable Innovation - Back Cover.png
+assets/images/book-covers/Unstable Innovation - Back Cover-enhanced.png
+assets/images/book-covers/Unstable Innovation - 3D Book.png
+assets/images/book-covers/Unstable Innovation - 3D Book-enhanced.png
+assets/images/book-covers/Innovacion Inestable Front.jpg
+assets/images/book-covers/Innovacion Inestable Back.jpg
+assets/images/book-covers/Amazon Book.png
+assets/images/book-covers/Amazon Ebook.png
+assets/images/book-covers/Unstable Innovation Free PDF EPUB Download.png
+
+# Other books originals
+assets/images/other-books-by-wespark/Thinking in Images - Front Book Cover - Nelson Inno.jpeg
+assets/images/other-books-by-wespark/Diplomado en Bitcoin - Curso Oficial.png
+
+# Photos originals
+assets/images/photos/Book Recommendations for website.png
+assets/images/photos/Innovation Helmet - WeSpark.png
+assets/images/photos/Innovation Helmet - WeSpark Workshop.png
+assets/images/photos/Innovators Path.png
+assets/images/photos/Kristofer Norvik - Training WeSpark.png
+assets/images/photos/MEGATENDENCIAS.jpg
+assets/images/photos/MegaTrends 2024 - Unstable Innovation.png
+assets/images/photos/Nelson Inno - Workshop Highfive.jpg
+assets/images/photos/Nelson Inno signing books 1.jpg
+assets/images/photos/Nelson Inno signing books 2.jpg
+assets/images/photos/Nelson Inno signing hundreds of Unstable Innovation Books.jpg
+assets/images/photos/Resumen Inestable.jpg
+assets/images/photos/Thank you Gloria Kriete Foundation for Spanish Version.jpg
+assets/images/photos/Unstable Innovation Books.JPG
+assets/images/photos/Unstable Innovation Fans.jpg
+assets/images/photos/Unstable Innovation Fans at the Launch Event.jpg
+assets/images/photos/Unstable Innovation at Salvadoran shools.jpg
+assets/images/photos/WeSpark Logo Brand.jpg
+assets/images/photos/WeSpark Office.jpg
+assets/images/photos/WeSpark Pillow Office.JPG
+assets/images/photos/nelsoninno/Nelson Inno - WeSpark Speaker.jpg
+assets/images/photos/nelsoninno/Nelson Inno - WeSpark.jpg
+assets/images/photos/nelsoninno/Nelson Inno with the WeSpark Logo Background.jpg
+assets/images/photos/nelsoninno/TEDx - Nelson Inno - TEDxTalk Vaduz.jpg
+
+# Recommended books originals
+assets/images/recommended-books/BTCstandard.png
+assets/images/recommended-books/BrokenMoney.png
+assets/images/recommended-books/HowToWinFriends.png
+assets/images/recommended-books/HowtoDesignWorkshops.png
+assets/images/recommended-books/LittleBTCBook.png
+assets/images/recommended-books/MiniUnstableInnovationBook.png
+assets/images/recommended-books/PriceOfTomorrow.png
+assets/images/recommended-books/Sprint.png
+assets/images/recommended-books/TheConsolationOfPhilosophy.png
+assets/images/recommended-books/TheLessonsOfHistory.png
+assets/images/recommended-books/TheRationalOptimist.png
+assets/images/recommended-books/TheSubtleArtOfNotGivingAF.png
+assets/images/recommended-books/ThinkingFastSlow.png
+assets/images/recommended-books/WinWithoutPitchingManifesto.png
+assets/images/recommended-books/littlebookStoicism.png
+
+# Icon originals (numbered + duplicated)
+assets/images/icons/1.png
+assets/images/icons/2.png
+assets/images/icons/3.png
+assets/images/icons/4.png
+assets/images/icons/5.png
+assets/images/icons/6.png
+assets/images/icons/7.png
+assets/images/icons/8.png
+assets/images/icons/9.png
+assets/images/icons/1positivemindset.png
+assets/images/icons/2hollisticview.png
+assets/images/icons/3extraordinarypresence.png
+assets/images/icons/4multiskilled.png
+assets/images/icons/n0.png
+assets/images/icons/n1.png
+assets/images/icons/n2.png
+assets/images/icons/n3.png
+assets/images/icons/n4.png
+assets/images/icons/n5.png
+assets/images/icons/n6.png
+assets/images/icons/n7.png
+assets/images/icons/n8.png
+assets/images/icons/n9.png
+assets/images/icons/Megatrends.png
+assets/images/icons/Favorite Books.png
+assets/images/icons/Key Takeaways.png
+assets/images/icons/Practical Applications.png
+assets/images/icons/Positive Mindset.png
+assets/images/icons/Hollistic Vision.png
+assets/images/icons/Extraordinary Presence.png
+assets/images/icons/Unique Skills Combination.png
+assets/images/icons/3D Book.blend1
+
+# OG originals
+assets/images/og/og-home.jpg
+assets/images/og/og-buy.jpg
+assets/images/og/og-author.jpg
+assets/images/og/og-default.jpg
+assets/images/og/UI Logo White.png
+assets/images/og/Innovacion Inestable Logo.png
+assets/images/og/Unstable Innovation - Text Black.png
+assets/images/og/Unstable Innovation - Logo Vector.svg
+
+# Featured-on logos originals
+assets/images/logos-featured-on/Forbes.svg
+assets/images/logos-featured-on/ZDF.svg
+assets/images/logos-featured-on/ARD.svg
+assets/images/logos-featured-on/TEDx.svg
+assets/images/logos-featured-on/CoinDesk.svg
+assets/images/logos-featured-on/CoinTelegraph.svg
+assets/images/logos-featured-on/Diario-El-Salvador.svg
+
+# ============================================================
+# Heavy videos we serve from YouTube, not from the repo
+# ============================================================
+assets/images/videos/1. What is Unstable Innovation.mp4
+assets/images/videos/2. For whom is Unstable Innovation.mp4
+assets/images/videos/3. Why does Unstable Innovation exist.mp4
+assets/images/videos/Unstable Innovation - Fans Compilation.mp4
+
+# ============================================================
+# Original Roboto TTF folder (we use generated WOFF2 instead)
+# ============================================================
+assets/fonts/Roboto - Font for the text and paragraphs only/
+assets/fonts/README - Fonts.txt

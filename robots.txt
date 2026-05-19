@@ -1,0 +1,37 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you/
+Disallow: /files/
+
+# AI / LLM crawlers
+User-agent: GPTBot
+Allow: /
+Disallow: /thank-you/
+Disallow: /files/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /thank-you/
+Disallow: /files/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /thank-you/
+Disallow: /files/
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+Sitemap: https://www.unstableinnovation.com/sitemap.xml
