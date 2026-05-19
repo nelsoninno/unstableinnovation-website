@@ -132,10 +132,58 @@ Tell Nelson who you are</h2>
 </section>
 
 <section class="section-tight" style="background: var(--color-card);">
-  <div class="container container-narrow text-center">
-    <p class="lead"><strong>Already a subscriber?</strong> <a href="../thank-you/">Skip to the download page &rarr;</a></p>
+  <div class="container container-narrow">
+    <div class="text-center mb-md">
+      <h3 style="font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(22px, 3vw, 32px); margin-bottom: 8px;">Already a subscriber?</h3>
+      <p class="text-soft" style="margin: 0;">Enter your email to skip the form and go straight to the downloads.</p>
+    </div>
+    <form id="quick-subscriber-form" novalidate style="display: flex; gap: 12px; max-width: 520px; margin-inline: auto; flex-wrap: wrap;">
+      <input id="quick-email" name="email" type="email" required autocomplete="email" placeholder="your-email@example.com" style="flex: 1 1 240px; padding: 14px 16px; font: inherit; border: 1.5px solid var(--color-line); border-radius: var(--radius-sm); background: #fff;">
+      <button type="submit" class="btn">Skip to downloads &rarr;</button>
+      <input type="text" name="company" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p id="quick-msg" role="status" style="flex-basis: 100%; margin: 0; font-size: 14px; color: var(--color-ink-muted); text-align: center;"></p>
+    </form>
   </div>
 </section>
+
+<script>
+(function () {
+  var form = document.getElementById("quick-subscriber-form");
+  if (!form) return;
+  var KIT_FORM_ID = "9462448";
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (form.querySelector('input[name="company"]').value !== "") return;
+    var emailField = document.getElementById("quick-email");
+    var msg = document.getElementById("quick-msg");
+    var btn = form.querySelector('button[type="submit"]');
+    var email = (emailField.value || "").trim();
+    if (!email) {
+      msg.textContent = "Please enter your email.";
+      msg.style.color = "#8b1f1f";
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = "Verifying...";
+    msg.style.color = "var(--color-ink-muted)";
+    msg.textContent = "Checking your subscription...";
+    var body = new URLSearchParams({
+      email_address: email,
+      "fields[source]": "unstableinnovation.com/get (already-subscriber path)"
+    });
+    fetch("https://api.kit.com/v3/forms/" + KIT_FORM_ID + "/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: body
+    }).then(function () {
+      // Always redirect, success or fail (we don't actually need to check)
+      location.href = "../thank-you/?name=Subscriber";
+    }).catch(function () {
+      location.href = "../thank-you/?name=Subscriber";
+    });
+  });
+})();
+</script>
 
 <div id="site-footer-mount"></div>
 <script src="../assets/js/partials.js?v=3" defer></script>
