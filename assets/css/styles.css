@@ -691,3 +691,177 @@ h4 { font-size: var(--type-h4); }
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ============================================================
+   Iteration 2 — fixes per Nelson's review
+   ============================================================ */
+
+/* Logo: just the SVG, no text. Hover turns yellow. */
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  height: 48px;
+  text-decoration: none;
+}
+.site-logo img {
+  width: auto;
+  height: 100%;
+  max-height: 48px;
+  transition: filter var(--t), transform var(--t);
+}
+.site-logo:hover img {
+  /* Convert black SVG to yellow #ffb900 */
+  filter: invert(70%) sepia(100%) saturate(2000%) hue-rotate(2deg) brightness(102%) contrast(101%);
+  transform: scale(1.03);
+}
+.site-logo span { display: none; }                       /* no duplicate text */
+.site-footer .site-logo { height: 56px; }
+.site-footer .site-logo img { filter: brightness(0) invert(1); }
+.site-footer .site-logo:hover img {
+  filter: invert(70%) sepia(100%) saturate(2000%) hue-rotate(2deg) brightness(102%) contrast(101%);
+}
+
+/* Bigger 3D book cover on the home "Choose your destiny" split */
+.hero-book-cover {
+  margin-inline: auto;
+  max-height: 1400px;
+  width: 100%;
+  max-width: 720px;
+}
+
+/* YouTube vertical embed: use thumbnail with big play button overlay */
+.yt-thumb {
+  position: relative;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-night);
+}
+.yt-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.95;
+  transition: opacity var(--t), transform var(--t);
+}
+.yt-thumb:hover img { opacity: 1; transform: scale(1.02); }
+.yt-thumb::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 72px; height: 72px;
+  margin: -36px 0 0 -36px;
+  background:
+    radial-gradient(circle, rgba(0,0,0,0.78) 0 36px, transparent 37px) center/100% no-repeat;
+  border-radius: 50%;
+}
+.yt-thumb::before {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  margin: -12px 0 0 -7px;
+  width: 0; height: 0;
+  border-left: 22px solid #fff;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  z-index: 2;
+}
+
+/* Spanish edition with overlapping photos */
+.es-stack {
+  position: relative;
+  max-width: 520px;
+  margin-inline: auto;
+  aspect-ratio: 3/4;
+}
+.es-stack__main {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
+}
+.es-stack__top-left {
+  position: absolute;
+  top: -8%; left: -14%;
+  width: 38%;
+  z-index: 1;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  transform: rotate(-2deg);
+}
+.es-stack__bottom-right {
+  position: absolute;
+  bottom: -6%; right: -8%;
+  width: 46%;
+  z-index: 3;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+  transform: rotate(3deg);
+}
+@media (max-width: 700px) {
+  .es-stack__top-left { width: 30%; left: -8%; }
+  .es-stack__bottom-right { width: 40%; right: -4%; }
+}
+
+/* Drawn step numbers (images instead of styled circle) */
+.step__number-img {
+  display: block;
+  margin: 0 auto 8px;
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+}
+
+/* "Fill this short form" - display-font centered title */
+.step h2.step-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: clamp(32px, 5vw, 56px);
+  letter-spacing: 0.02em;
+}
+
+/* Visually distinguish links inside .prose-links (used on thank-you next steps) */
+.prose-links a {
+  color: var(--color-ink);
+  background-image: linear-gradient(transparent 60%, var(--color-accent) 60%);
+  background-size: 100% 100%;
+  padding: 0 2px;
+  transition: background-size var(--t), color var(--t);
+  font-weight: 700;
+}
+.prose-links a:hover {
+  color: #000;
+  background-image: linear-gradient(var(--color-accent), var(--color-accent));
+}
+
+/* Big centered quote (for the /author mantra) */
+.big-quote {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: clamp(40px, 7vw, 88px);
+  line-height: 1.05;
+  text-align: center;
+  margin: clamp(48px, 8vw, 80px) auto;
+  max-width: 14ch;
+  position: relative;
+  color: var(--color-ink);
+}
+.big-quote::before,
+.big-quote::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  background: var(--color-accent);
+  margin: 24px auto;
+}
+.big-quote em {
+  font-style: normal;
+  color: var(--color-accent);
+}
+.section-dark .big-quote { color: #fff; }
