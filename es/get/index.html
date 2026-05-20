@@ -15,14 +15,14 @@
 <link rel="icon" type="image/x-icon" href="../../favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32-unstable-innovation-nelson-inno.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon-unstable-innovation-nelson-inno.png">
-<link rel="stylesheet" href="../../assets/css/styles.css?v=8">
+<link rel="stylesheet" href="../../assets/css/styles.css?v=9">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 html[lang="es"] h1, html[lang="es"] h2, html[lang="es"] h3, html[lang="es"] .btn, html[lang="es"] .eyebrow,
 html[lang="es"] .site-nav a, html[lang="es"] .step h2.step-title { font-family: 'Unstable', 'Anton', 'Bebas Neue', sans-serif; }
-html[lang="es"] .spanish-fallback { font-family: 'Anton', 'Bebas Neue', sans-serif; }
+.spanish-fallback { font-family: var(--font-display); }
 .step__number-img { width: 80px !important; height: 80px !important; background: transparent; }
-.step h2.step-title { font-family: 'Anton', 'Bebas Neue', sans-serif !important; }
+.step h2.step-title { font-family: var(--font-display); }
 </style>
 </head>
 <body>
@@ -108,7 +108,7 @@ html[lang="es"] .spanish-fallback { font-family: 'Anton', 'Bebas Neue', sans-ser
 <section class="section-tight" style="background: var(--color-card);">
   <div class="container container-narrow">
     <div class="text-center mb-md">
-      <h3 class="spanish-fallback" style="font-family: 'Anton', sans-serif; font-weight: 400; text-transform: uppercase; font-size: clamp(22px, 3vw, 32px); margin-bottom: 8px;">¿Ya eres suscriptor?</h3>
+      <h3 class="spanish-fallback" style="font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(22px, 3vw, 32px); margin-bottom: 8px;">¿Ya eres suscriptor?</h3>
       <p class="text-soft" style="margin: 0;">Ingresa tu correo para saltar el formulario y ir directo a la descarga.</p>
     </div>
     <form id="quick-subscriber-form" novalidate style="display: flex; gap: 12px; max-width: 520px; margin-inline: auto; flex-wrap: wrap;">

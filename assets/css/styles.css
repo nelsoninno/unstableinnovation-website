@@ -3,6 +3,14 @@
    ============================================================ */
 
 /* ---- Fonts ----------------------------------------------- */
+/* Anton is loaded from Google Fonts as the per-character fallback for any
+   code point Unstable doesn't draw (mainly the Spanish accented letters
+   é í ó ú ñ ü and their capitals, plus á / Ä which exist in Unstable's
+   cmap but ship with empty glyphs). The unicode-range trick below means
+   the browser fetches Unstable for chars it really has, and falls through
+   to Anton ONLY for the missing characters — character by character. */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 @font-face {
   font-family: "Unstable";
   src: url("../fonts/Unstable-Regular.woff2") format("woff2"),
@@ -10,6 +18,13 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  /* Restrict Unstable to the code points it actually has real, non-empty
+     glyphs for. Everything outside this range will cascade to Anton via
+     the --font-display stack. Specifically excludes á (U+00E1) and Ä
+     (U+00C4) — Unstable's cmap claims to support them but the glyphs
+     are blank, which would otherwise render as missing characters. */
+  unicode-range: U+0020-007E, U+00A1, U+00A9, U+00AE, U+00BF, U+00D7,
+                 U+2013-2014, U+2022, U+2026, U+20AC, U+2122, U+2212;
 }
 @font-face {
   font-family: "Roboto";
