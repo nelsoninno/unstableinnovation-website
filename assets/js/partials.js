@@ -65,25 +65,26 @@ window.renderHeader = function () {
   var labels = isEs
     ? { home: "Inicio", buy: "Comprar", get: "Descarga gratis", insights: "Aprendizajes", books: "Libros", author: "Autor", reviews: "Reseñas" }
     : { home: "Home", buy: "Buy", get: "Free download", insights: "Insights", books: "Books", author: "Author", reviews: "Reviews" };
-  // Paths from current page back to language root
-  var langRoot = p; // already gives us the path to root
+  // Paths from current page back to the *language* root (so Spanish nav stays in Spanish).
+  // On Spanish pages langRoot = p + "es/" — e.g. from /es/get/ that becomes ../../es/ → /es/
+  var langRoot = isEs ? (p + "es/") : p;
   var html = ""
     + '<header class="site-header">'
     +   '<div class="container site-header__inner">'
-    +     '<a href="' + p + '" class="site-logo" aria-label="Unstable Innovation">'
+    +     '<a href="' + langRoot + '" class="site-logo" aria-label="Unstable Innovation">'
     +       '<img src="' + p + 'assets/images/og/unstable-innovation-logo-vector-nelson-inno.svg" alt="Unstable Innovation" width="38" height="38">'
     +     '</a>'
     +     '<button class="menu-toggle" aria-label="Open menu" aria-expanded="false">'
     +       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>'
     +     '</button>'
     +     '<nav class="site-nav" aria-label="Primary">'
-    +       '<a href="' + p + '" data-path="/">' + labels.home + '</a>'
-    +       '<a href="' + p + 'buy/" data-path="/buy">' + labels.buy + '</a>'
-    +       '<a href="' + p + 'get/" data-path="/get">' + labels.get + '</a>'
-    +       '<a href="' + p + 'insights/" data-path="/insights">' + labels.insights + '</a>'
-    +       '<a href="' + p + 'books/" data-path="/books">' + labels.books + '</a>'
-    +       '<a href="' + p + 'author/" data-path="/author">' + labels.author + '</a>'
-    +       '<a href="' + p + 'reviews/" data-path="/reviews">' + labels.reviews + '</a>'
+    +       '<a href="' + langRoot + '" data-path="/">' + labels.home + '</a>'
+    +       '<a href="' + langRoot + 'buy/" data-path="/buy">' + labels.buy + '</a>'
+    +       '<a href="' + langRoot + 'get/" data-path="/get">' + labels.get + '</a>'
+    +       '<a href="' + langRoot + 'insights/" data-path="/insights">' + labels.insights + '</a>'
+    +       '<a href="' + langRoot + 'books/" data-path="/books">' + labels.books + '</a>'
+    +       '<a href="' + langRoot + 'author/" data-path="/author">' + labels.author + '</a>'
+    +       '<a href="' + langRoot + 'reviews/" data-path="/reviews">' + labels.reviews + '</a>'
     +     '</nav>'
     +     '<div class="lang-toggle" role="group" aria-label="Language">'
     +       '<a href="' + (isEs ? counterpart : '#') + '" class="' + (isEs ? '' : 'is-active') + '" aria-label="English" ' + (isEs ? '' : 'aria-current="page"') + '><span class="flag flag-en" aria-hidden="true"></span>EN</a>'
@@ -97,6 +98,7 @@ window.renderHeader = function () {
 window.renderFooter = function () {
   var p = window.PATH_PREFIX || "./";
   var isEs = window.IS_ES;
+  var langRoot = isEs ? (p + "es/") : p;
   var labels = isEs
     ? { tagline: "Un libro sobre innovación, emprendimiento y filosofía por Nelson Inno. Publicado por WeSpark.",
         bookH: "El libro", buyAm: "Comprar en Amazon", getFree: "PDF / EPUB gratis", revs: "Reseñas de lectores", ins: "Aprendizajes",
@@ -116,7 +118,7 @@ window.renderFooter = function () {
     +   '<div class="container">'
     +     '<div class="site-footer__grid">'
     +       '<div>'
-    +         '<a href="' + p + '" class="site-logo" style="color:#fff">'
+    +         '<a href="' + langRoot + '" class="site-logo" style="color:#fff">'
     +           '<img src="' + p + 'assets/images/og/unstable-innovation-logo-vector-nelson-inno.svg" alt="Unstable Innovation" width="38" height="38" style="filter:brightness(0) invert(1)">'
     +         '</a>'
     +         '<p style="margin-top:16px;max-width:36ch;color:#a8a8a8;font-size:14px;">' + labels.tagline + '</p>'
@@ -124,16 +126,16 @@ window.renderFooter = function () {
     +       '<div>'
     +         '<h5>' + labels.bookH + '</h5>'
     +         '<ul>'
-    +           '<li><a href="' + p + 'buy/">' + labels.buyAm + '</a></li>'
-    +           '<li><a href="' + p + 'get/">' + labels.getFree + '</a></li>'
-    +           '<li><a href="' + p + 'reviews/">' + labels.revs + '</a></li>'
-    +           '<li><a href="' + p + 'insights/">' + labels.ins + '</a></li>'
+    +           '<li><a href="' + langRoot + 'buy/">' + labels.buyAm + '</a></li>'
+    +           '<li><a href="' + langRoot + 'get/">' + labels.getFree + '</a></li>'
+    +           '<li><a href="' + langRoot + 'reviews/">' + labels.revs + '</a></li>'
+    +           '<li><a href="' + langRoot + 'insights/">' + labels.ins + '</a></li>'
     +         '</ul>'
     +       '</div>'
     +       '<div>'
     +         '<h5>' + labels.authorH + '</h5>'
     +         '<ul>'
-    +           '<li><a href="' + p + 'author/">' + labels.aboutN + '</a></li>'
+    +           '<li><a href="' + langRoot + 'author/">' + labels.aboutN + '</a></li>'
     +           '<li><a href="https://nelsoninno.com" rel="noopener">nelsoninno.com</a></li>'
     +           '<li><a href="https://wespark.io" rel="noopener">WeSpark</a></li>'
     +           '<li><a href="https://yourownterms.life" rel="noopener">Your Own Terms</a></li>'
@@ -145,7 +147,7 @@ window.renderFooter = function () {
     +           '<li><a href="https://www.linkedin.com/in/nelsoninno/" rel="noopener">' + labels.linked + '</a></li>'
     +           '<li><a href="https://youtu.be/trEo4g7MIUU" rel="noopener">' + labels.tedx + '</a></li>'
     +           '<li><a href="https://geyser.fund/project/unstableinnovation" rel="noopener">' + labels.geyser + '</a></li>'
-    +           '<li><a href="' + p + 'resources/">' + labels.res + '</a></li>'
+    +           '<li><a href="' + langRoot + 'resources/">' + labels.res + '</a></li>'
     +         '</ul>'
     +       '</div>'
     +     '</div>'
