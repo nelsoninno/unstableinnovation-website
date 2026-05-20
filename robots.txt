@@ -1,22 +1,26 @@
 User-agent: *
 Allow: /
 Disallow: /thank-you/
+Disallow: /es/thank-you/
 Disallow: /files/
 
 # AI / LLM crawlers
 User-agent: GPTBot
 Allow: /
 Disallow: /thank-you/
+Disallow: /es/thank-you/
 Disallow: /files/
 
 User-agent: ClaudeBot
 Allow: /
 Disallow: /thank-you/
+Disallow: /es/thank-you/
 Disallow: /files/
 
 User-agent: Google-Extended
 Allow: /
 Disallow: /thank-you/
+Disallow: /es/thank-you/
 Disallow: /files/
 
 User-agent: anthropic-ai
