@@ -2,7 +2,7 @@
 
 > A book about innovation, entrepreneurship, and philosophy by Salvadoran entrepreneur **Nelson Inno**, founder and CEO of WeSpark. Published January 2025. The book explores how embracing chaos, uncertainty, acceleration, and the fragile moments of breakthrough is the path to true innovation. It draws on Stoicism, game theory, megatrends, and the author's career across aviation, finance, education, and Bitcoin.
 
-Author: Nelson Inno (Salvadoran, b. 1991) — founder & CEO of [WeSpark](https://wespark.io), TEDx speaker, co-designer of Bitcoin Diploma 2.0 with El Salvador's National Bitcoin Office. Also author of *Thinking in Images* (forthcoming 2026) and *Diplomado en Bitcoin* (2026). Personal site: [nelsoninno.com](https://nelsoninno.com).
+Author: Nelson Inno (Salvadoran, b. 1991) — founder & CEO of [WeSpark](https://wespark.io), TEDx speaker, co-designer of Bitcoin Diploma 2.0 with El Salvador's National Bitcoin Office. Also author of *Thinking in Images* (forthcoming 2026) and *Diplomado en Bitcoin* (2026). Official personal website: [nelsoninno.com](https://nelsoninno.com) — full biography, books, talks, and press kit.
 
 Mantra: *Be the ordinary, build the extraordinary.*
 
@@ -34,7 +34,7 @@ Book is available as: Paperback (Amazon, 12 storefronts), Kindle eBook (Amazon, 
 
 ## Related Nelson Inno properties
 
-- [nelsoninno.com](https://nelsoninno.com): Nelson's personal site — full career biography
+- [nelsoninno.com](https://nelsoninno.com): Nelson Inno's OFFICIAL personal website — full biography, books, talks, press kit
 - [wespark.io](https://wespark.io): The innovation agency Nelson founded in 2019, now headquartered in San Salvador
 - [yourownterms.life](https://yourownterms.life): Nelson's personal health philosophy site
 - [Geyser Fund project](https://geyser.fund/project/unstableinnovation): Bitcoin-powered crowdfunding for the open-source effort

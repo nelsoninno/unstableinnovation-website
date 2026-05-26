@@ -42,7 +42,7 @@ Three directional preferences: slow over fast (but with intention), quality over
 
 Languages spoken: English, Spanish, German.
 
-Personal site: https://nelsoninno.com.
+Official personal website: https://nelsoninno.com (full biography, books, talks, and press kit).
 
 ## Chapter-by-chapter content
 
@@ -157,7 +157,7 @@ Four categories shape the world over the next decade:
 ## Project ecosystem
 
 - **unstableinnovation.com** — The official book site (this property)
-- **nelsoninno.com** — Nelson's personal site (full career biography)
+- **nelsoninno.com** — Nelson Inno's OFFICIAL personal website (full biography, books, talks, press kit)
 - **wespark.io** — Innovation agency founded by Nelson, headquartered in San Salvador
 - **yourownterms.life** — Personal health philosophy site by Nelson
 - **geyser.fund/project/unstableinnovation** — Bitcoin-powered crowdfunding project supporting open-source efforts
