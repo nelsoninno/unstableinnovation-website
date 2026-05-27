@@ -156,7 +156,7 @@ window.renderFooter = function () {
     +     '<div class="site-footer__made-with-love" style="display:flex; align-items:center; justify-content:center; gap:10px; padding:18px 0 6px; border-top:1px solid rgba(255,255,255,0.08); flex-wrap:wrap; color:#a8a8a8; font-size:13px;">'
     +       '<span>' + labels.madeWith + '</span>'
     +       '<a href="https://everybodyknowsyou.com/" rel="noopener" target="_blank" aria-label="' + labels.ekyAlt + '" style="display:inline-flex; align-items:center; gap:8px; color:#fff; text-decoration:none; line-height:1;">'
-    +         '<img src="' + p + 'assets/images/logos-featured-on/eky-logo-complete-forblackbackground.png" alt="Everybodyknowsyou.com logo" width="120" height="22" loading="lazy" style="height:22px; width:auto; display:block;">'
+    +         '<img src="' + p + 'assets/images/logos-featured-on/eky-logo-complete-forblackbackground.png" alt="Everybodyknowsyou.com logo" width="170" height="32" loading="lazy" style="height:32px; width:auto; display:block;">'
     +         '<span>everybodyknowsyou.com</span>'
     +       '</a>'
     +     '</div>'
