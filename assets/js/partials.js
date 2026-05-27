@@ -104,12 +104,14 @@ window.renderFooter = function () {
         bookH: "El libro", buyAm: "Comprar en Amazon", getFree: "PDF / EPUB gratis", revs: "Reseñas de lectores", ins: "Aprendizajes",
         authorH: "El autor", aboutN: "Sobre Nelson Inno", connH: "Conecta", linked: "LinkedIn", tedx: "Charla TEDx", geyser: "Geyser Fund", res: "Recursos",
         copy: "© " + (new Date().getFullYear()) + " Nelson Inno. Publicado por WeSpark.",
-        built: "Construido en El Salvador · Hospedado en GitHub Pages" }
+        built: "Construido en El Salvador · Hospedado en GitHub Pages",
+        madeWith: "Hecho con amor, por", ekyAlt: "Everybodyknowsyou.com" }
     : { tagline: "A book about innovation, entrepreneurship, and philosophy by Nelson Inno. Published by WeSpark.",
         bookH: "The book", buyAm: "Buy on Amazon", getFree: "Free PDF / EPUB", revs: "Reader reviews", ins: "Insights",
         authorH: "The author", aboutN: "About Nelson Inno", connH: "Connect", linked: "LinkedIn", tedx: "TEDx talk", geyser: "Geyser Fund", res: "Resources",
         copy: "© " + (new Date().getFullYear()) + " Nelson Inno. Published by WeSpark.",
-        built: "Built in El Salvador · Hosted on GitHub Pages" };
+        built: "Built in El Salvador · Hosted on GitHub Pages",
+        madeWith: "Made with love, by", ekyAlt: "Everybodyknowsyou.com" };
 
   var el = document.getElementById("site-footer-mount");
   if (!el) return;
@@ -150,6 +152,13 @@ window.renderFooter = function () {
     +           '<li><a href="' + langRoot + 'resources/">' + labels.res + '</a></li>'
     +         '</ul>'
     +       '</div>'
+    +     '</div>'
+    +     '<div class="site-footer__made-with-love" style="display:flex; align-items:center; justify-content:center; gap:10px; padding:18px 0 6px; border-top:1px solid rgba(255,255,255,0.08); flex-wrap:wrap; color:#a8a8a8; font-size:13px;">'
+    +       '<span>' + labels.madeWith + '</span>'
+    +       '<a href="https://everybodyknowsyou.com/" rel="noopener" target="_blank" aria-label="' + labels.ekyAlt + '" style="display:inline-flex; align-items:center; gap:8px; color:#fff; text-decoration:none; line-height:1;">'
+    +         '<img src="' + p + 'assets/images/logos-featured-on/eky-logo-complete-forblackbackground.png" alt="Everybodyknowsyou.com logo" width="120" height="22" loading="lazy" style="height:22px; width:auto; display:block;">'
+    +         '<span>everybodyknowsyou.com</span>'
+    +       '</a>'
     +     '</div>'
     +     '<div class="site-footer__bottom">'
     +       '<span>' + labels.copy + '</span>'
