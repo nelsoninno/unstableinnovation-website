@@ -18,7 +18,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 <link rel="manifest" href="../../site.webmanifest">
-<link rel="stylesheet" href="../../assets/css/styles.css?v=9">
+<link rel="stylesheet" href="../../assets/css/styles.css?v=10">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 html[lang="es"] h1, html[lang="es"] h2, html[lang="es"] h3, html[lang="es"] .btn, html[lang="es"] .eyebrow, html[lang="es"] .big-quote { font-family: 'Unstable', 'Anton', 'Bebas Neue', sans-serif; }
@@ -28,42 +28,152 @@ html[lang="es"] h1, html[lang="es"] h2, html[lang="es"] h3, html[lang="es"] .btn
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://nelsoninno.com/#person",
-  "name": "Nelson Inno",
-  "givenName": "Nelson",
-  "familyName": "Inno",
-  "url": "https://nelsoninno.com",
-  "mainEntityOfPage": "https://www.unstableinnovation.com/es/author/",
-  "inLanguage": "es",
-  "sameAs": [
-    "https://www.linkedin.com/in/nelsoninno/",
-    "https://nelsoninno.com",
-    "https://wespark.io",
-    "https://yourownterms.life",
-    "https://www.youtube.com/@nelsoninno",
-    "https://x.com/nelsoninno"
-  ],
-  "image": "https://www.unstableinnovation.com/assets/images/photos/nelsoninno/nelson-inno-wespark-speaker-unstable-innovation-author.webp",
-  "jobTitle": ["Fundador y CEO de WeSpark", "Autor", "Orador TEDx", "Asesor ad-honorem"],
-  "worksFor": {
-    "@type": "Organization",
-    "name": "WeSpark",
-    "url": "https://wespark.io"
-  },
-  "knowsAbout": ["Innovaci\u00f3n", "Emprendimiento", "Filosof\u00eda", "Estoicismo", "Teor\u00eda de juegos", "Megatendencias", "Bitcoin", "Descentralizaci\u00f3n", "Dise\u00f1o educativo", "Sistemas de aprendizaje con IA", "Facilitaci\u00f3n de talleres", "Lean Startup"],
-  "nationality": { "@type": "Country", "name": "El Salvador" },
-  "address": { "@type": "PostalAddress", "addressLocality": "San Salvador", "addressCountry": "SV" },
-  "knowsLanguage": ["es", "en", "de"],
-  "description": "Nelson Inno es un emprendedor salvadore\u00f1o, fundador y CEO de WeSpark, y autor de Innovaci\u00f3n Inestable. Construye sistemas de educaci\u00f3n con IA para gobiernos, universidades y empresas Fortune-500, y co-dise\u00f1\u00f3 el Diploma Bitcoin 2.0 con la Oficina Nacional de Bitcoin de El Salvador. Su sitio web oficial es https://nelsoninno.com.",
-  "subjectOf": {
-    "@type": "WebSite",
-    "@id": "https://nelsoninno.com/#website",
-    "url": "https://nelsoninno.com",
-    "name": "nelsoninno.com \u2014 Sitio web oficial de Nelson Inno",
-    "inLanguage": ["es", "en"],
-    "about": { "@id": "https://nelsoninno.com/#person" }
-  }
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://nelsoninno.com/#person",
+      "name": "Nelson Inno",
+      "givenName": "Nelson",
+      "familyName": "Inno",
+      "url": "https://nelsoninno.com",
+      "mainEntityOfPage": "https://www.unstableinnovation.com/es/author/",
+      "inLanguage": "es",
+      "sameAs": [
+        "https://www.linkedin.com/in/nelsoninno/",
+        "https://nelsoninno.com",
+        "https://wespark.io",
+        "https://yourownterms.life",
+        "https://www.youtube.com/@nelsoninno",
+        "https://x.com/nelsoninno"
+      ],
+      "image": "https://www.unstableinnovation.com/assets/images/photos/nelsoninno/nelson-inno-wespark-speaker-unstable-innovation-author.webp",
+      "jobTitle": [
+        "Fundador y CEO de WeSpark",
+        "Autor",
+        "Orador TEDx",
+        "Asesor ad-honorem"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "WeSpark",
+        "url": "https://wespark.io"
+      },
+      "knowsAbout": [
+        "Innovación",
+        "Emprendimiento",
+        "Filosofía",
+        "Estoicismo",
+        "Teoría de juegos",
+        "Megatendencias",
+        "Bitcoin",
+        "Descentralización",
+        "Diseño educativo",
+        "Sistemas de aprendizaje con IA",
+        "Facilitación de talleres",
+        "Lean Startup"
+      ],
+      "nationality": {
+        "@type": "Country",
+        "name": "El Salvador"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Salvador",
+        "addressCountry": "SV"
+      },
+      "knowsLanguage": [
+        "es",
+        "en",
+        "de"
+      ],
+      "description": "Nelson Inno es un emprendedor salvadoreño, fundador y CEO de WeSpark, y autor de Innovación Inestable. Construye sistemas de educación con IA para gobiernos, universidades y empresas Fortune-500, y co-diseñó el Diploma Bitcoin 2.0 con la Oficina Nacional de Bitcoin de El Salvador. Su sitio web oficial es https://nelsoninno.com.",
+      "subjectOf": {
+        "@type": "WebSite",
+        "@id": "https://nelsoninno.com/#website",
+        "url": "https://nelsoninno.com",
+        "name": "nelsoninno.com — Sitio web oficial de Nelson Inno",
+        "inLanguage": [
+          "es",
+          "en"
+        ],
+        "about": {
+          "@id": "https://nelsoninno.com/#person"
+        }
+      },
+      "hasOfferCatalog": {
+        "@id": "https://nelsoninno.com/#service-catalog"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.unstableinnovation.com/#website",
+      "url": "https://www.unstableinnovation.com/",
+      "name": "Unstable Innovation",
+      "inLanguage": [
+        "en",
+        "es"
+      ],
+      "about": {
+        "@id": "https://nelsoninno.com/#person"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.unstableinnovation.com/es/author/#webpage",
+      "url": "https://www.unstableinnovation.com/es/author/",
+      "name": "Nelson Inno, autor de Innovación Inestable, fundador de WeSpark",
+      "isPartOf": {
+        "@id": "https://www.unstableinnovation.com/#website"
+      },
+      "about": {
+        "@id": "https://nelsoninno.com/#person"
+      },
+      "inLanguage": "es"
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://nelsoninno.com/#service-catalog",
+      "name": "Servicios de consultoría de Nelson Inno",
+      "provider": {
+        "@id": "https://nelsoninno.com/#person"
+      },
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Educación, capacitación e implementación de IA",
+            "description": "Currículos institucionales de IA, programas de fluidez en IA, y diseño de sistemas de IA de principio a fin para equipos de innovación, transformación digital y tecnología dentro de grandes empresas y gobiernos.",
+            "provider": {
+              "@id": "https://nelsoninno.com/#person"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Educación e implementación de Bitcoin",
+            "description": "Educación de nivel institucional en Bitcoin, estrategia de tecnología soberana, y programas de adopción. Co-diseñador del Diploma Bitcoin 2.0 nacional de El Salvador.",
+            "provider": {
+              "@id": "https://nelsoninno.com/#person"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Innovación y transformación tecnológica",
+            "description": "Diseño de nuevos departamentos de innovación, metodologías de talleres, y estrategia basada en megatendencias para grandes empresas y gobiernos.",
+            "provider": {
+              "@id": "https://nelsoninno.com/#person"
+            }
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 </head>

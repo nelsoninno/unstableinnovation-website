@@ -16,37 +16,234 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
-<link rel="stylesheet" href="../assets/css/styles.css?v=8">
+<link rel="stylesheet" href="../assets/css/styles.css?v=10">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Book",
-  "name": "Unstable Innovation: The Fragile State Most Will Never Understand",
-  "author": { "@type": "Person", "name": "Nelson Inno", "url": "https://nelsoninno.com" },
-  "url": "https://www.unstableinnovation.com/",
-  "image": "https://www.unstableinnovation.com/assets/images/book-covers/unstable-innovation-3d-book-nelson-inno.webp",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "bestRating": "5",
-    "worstRating": "1",
-    "ratingCount": "12",
-    "reviewCount": "12"
-  },
-  "review": [
-    { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "author": { "@type": "Person", "name": "Momster" }, "name": "Best Book I've read on Innovation!", "reviewBody": "You don't need to be an innovator to appreciate this book! Whether you're an idea person, or just know and love one, you'll enjoy this glimpse into the minds of the people in our world who make things happen.", "datePublished": "2025-04-24" },
-    { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "author": { "@type": "Person", "name": "Bryan Cassady" }, "name": "A must read creativity jumpstart", "reviewBody": "Some books give you information, others inspire you. Unstable Innovation does both, effortlessly.", "datePublished": "2025-02-15" },
-    { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "author": { "@type": "Person", "name": "JevonPerra" }, "name": "Creativity jumpstart", "reviewBody": "Nelson is crazy creative. Check out the projects he has done. This is a great book to get you going and even propel you faster if you are already going.", "datePublished": "2025-02-09" },
-    { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "author": { "@type": "Person", "name": "Luis Lopez-Portillo" }, "name": "Great insights, entertaining and easy to read", "reviewBody": "One of the friendliest books on innovation I have read lately. Very easy-reading, fast paced and entertaining.", "datePublished": "2025-01-29" },
-    { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "author": { "@type": "Person", "name": "Aliya A" }, "name": "Embrace uncertainty and take action!", "reviewBody": "Highly recommend this book to entrepreneurs, innovators, students or anyone seeking their path. The author, Nelson, understands innovation not just through his career but also from witnessing the incredible transformation of his own country, El Salvador.", "datePublished": "2025-02-01" },
-    { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "author": { "@type": "Person", "name": "George Vouvoudakis" }, "name": "Explore and Read with Loved Ones of all Ages", "reviewBody": "The sooner the better. Then move on to the books he recommends. I recommend HIGHLY.", "datePublished": "2025-03-05" },
-    { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "author": { "@type": "Person", "name": "Rudy Gallardo" }, "name": "Thought-provoking and inspiring", "reviewBody": "This book was really thought-provoking and inspiring. After reading it, I feel more motivated to create value in the world.", "datePublished": "2025-02-21" },
-    { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "author": { "@type": "Person", "name": "Benjamin Dehant" }, "name": "Inspiration for Innovation", "reviewBody": "Nelson is an innovator and a disruptor. He is a highly creative individual and his work and projects always amaze me.", "datePublished": "2025-02-12" },
-    { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "author": { "@type": "Person", "name": "Tim" }, "name": "Stabiles Buch über die fragile Innovation", "reviewBody": "Unstable Innovation ist ein Buch, das den Leser durch seine durchdachten Einblicke in den Innovationsprozess überzeugt.", "datePublished": "2025-03-03", "inLanguage": "de" },
-    { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "author": { "@type": "Person", "name": "Victor Iraheta" }, "name": "An innovator's mind on paper!", "reviewBody": "You can truly feel the spirit of a true innovator and learn from his personal experiences, practices and examples from the field of innovation.", "datePublished": "2025-02-24" },
-    { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "author": { "@type": "Person", "name": "Abdul Rahman" }, "name": "Great guide for fuzzy innovation", "reviewBody": "An excellent distillation of innovation tips, experience, and best practice. Definitely recommended for everyone interested in innovation.", "datePublished": "2025-02-14" },
-    { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "author": { "@type": "Person", "name": "Metamick", "sameAs": "https://twitter.com/metamick14" }, "name": "One of those rare books I couldn't put down", "reviewBody": "Unstable Innovation by Nelson Inno is one of those rare books I could not put down. His book got me feeling like I was on a journey inside Nelson's deep thoughts and the chaos of the world we live in. Really recommend checking it out.", "datePublished": "2026-11-01", "publisher": { "@type": "Organization", "name": "X" } }
+  "@graph": [
+    {
+      "@type": "Book",
+      "name": "Unstable Innovation: The Fragile State Most Will Never Understand",
+      "author": {
+        "@type": "Person",
+        "name": "Nelson Inno",
+        "url": "https://nelsoninno.com"
+      },
+      "url": "https://www.unstableinnovation.com/",
+      "image": "https://www.unstableinnovation.com/assets/images/book-covers/unstable-innovation-3d-book-nelson-inno.webp",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "12",
+        "reviewCount": "12"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Momster"
+          },
+          "name": "Best Book I've read on Innovation!",
+          "reviewBody": "You don't need to be an innovator to appreciate this book! Whether you're an idea person, or just know and love one, you'll enjoy this glimpse into the minds of the people in our world who make things happen.",
+          "datePublished": "2025-04-24"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Bryan Cassady"
+          },
+          "name": "A must read creativity jumpstart",
+          "reviewBody": "Some books give you information, others inspire you. Unstable Innovation does both, effortlessly.",
+          "datePublished": "2025-02-15"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "JevonPerra"
+          },
+          "name": "Creativity jumpstart",
+          "reviewBody": "Nelson is crazy creative. Check out the projects he has done. This is a great book to get you going and even propel you faster if you are already going.",
+          "datePublished": "2025-02-09"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Luis Lopez-Portillo"
+          },
+          "name": "Great insights, entertaining and easy to read",
+          "reviewBody": "One of the friendliest books on innovation I have read lately. Very easy-reading, fast paced and entertaining.",
+          "datePublished": "2025-01-29"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Aliya A"
+          },
+          "name": "Embrace uncertainty and take action!",
+          "reviewBody": "Highly recommend this book to entrepreneurs, innovators, students or anyone seeking their path. The author, Nelson, understands innovation not just through his career but also from witnessing the incredible transformation of his own country, El Salvador.",
+          "datePublished": "2025-02-01"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "George Vouvoudakis"
+          },
+          "name": "Explore and Read with Loved Ones of all Ages",
+          "reviewBody": "The sooner the better. Then move on to the books he recommends. I recommend HIGHLY.",
+          "datePublished": "2025-03-05"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Rudy Gallardo"
+          },
+          "name": "Thought-provoking and inspiring",
+          "reviewBody": "This book was really thought-provoking and inspiring. After reading it, I feel more motivated to create value in the world.",
+          "datePublished": "2025-02-21"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Benjamin Dehant"
+          },
+          "name": "Inspiration for Innovation",
+          "reviewBody": "Nelson is an innovator and a disruptor. He is a highly creative individual and his work and projects always amaze me.",
+          "datePublished": "2025-02-12"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Tim"
+          },
+          "name": "Stabiles Buch über die fragile Innovation",
+          "reviewBody": "Unstable Innovation ist ein Buch, das den Leser durch seine durchdachten Einblicke in den Innovationsprozess überzeugt.",
+          "datePublished": "2025-03-03",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Victor Iraheta"
+          },
+          "name": "An innovator's mind on paper!",
+          "reviewBody": "You can truly feel the spirit of a true innovator and learn from his personal experiences, practices and examples from the field of innovation.",
+          "datePublished": "2025-02-24"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Abdul Rahman"
+          },
+          "name": "Great guide for fuzzy innovation",
+          "reviewBody": "An excellent distillation of innovation tips, experience, and best practice. Definitely recommended for everyone interested in innovation.",
+          "datePublished": "2025-02-14"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Metamick",
+            "sameAs": "https://twitter.com/metamick14"
+          },
+          "name": "One of those rare books I couldn't put down",
+          "reviewBody": "Unstable Innovation by Nelson Inno is one of those rare books I could not put down. His book got me feeling like I was on a journey inside Nelson's deep thoughts and the chaos of the world we live in. Really recommend checking it out.",
+          "datePublished": "2026-11-01",
+          "publisher": {
+            "@type": "Organization",
+            "name": "X"
+          }
+        }
+      ],
+      "@id": "https://www.unstableinnovation.com/#book"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.unstableinnovation.com/#website",
+      "url": "https://www.unstableinnovation.com/",
+      "name": "Unstable Innovation",
+      "inLanguage": [
+        "en",
+        "es"
+      ],
+      "about": {
+        "@id": "https://www.unstableinnovation.com/#book"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.unstableinnovation.com/reviews/#webpage",
+      "url": "https://www.unstableinnovation.com/reviews/",
+      "name": "Unstable Innovation reviews, 12 verified reader reviews",
+      "isPartOf": {
+        "@id": "https://www.unstableinnovation.com/#website"
+      },
+      "about": {
+        "@id": "https://www.unstableinnovation.com/#book"
+      },
+      "inLanguage": "en"
+    }
   ]
 }
 </script>

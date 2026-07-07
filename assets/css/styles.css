@@ -614,6 +614,15 @@ h4 { font-size: var(--type-h4); }
 .split--reverse > * { direction: ltr; }
 @media (max-width: 800px) { .split { grid-template-columns: 1fr; } }
 
+/* 3-column variant for the "Work with Nelson" service surface */
+.split-thirds {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: clamp(24px, 4vw, 40px);
+  align-items: start;
+}
+@media (max-width: 900px) { .split-thirds { grid-template-columns: 1fr; } }
+
 /* ---- Geyser callout / dark callout ----------------------- */
 .dark-cta {
   background: var(--color-night);

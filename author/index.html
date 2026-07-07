@@ -20,50 +20,167 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
-<link rel="stylesheet" href="../assets/css/styles.css?v=8">
+<link rel="stylesheet" href="../assets/css/styles.css?v=10">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://nelsoninno.com/#person",
-  "name": "Nelson Inno",
-  "givenName": "Nelson",
-  "familyName": "Inno",
-  "url": "https://nelsoninno.com",
-  "mainEntityOfPage": "https://www.unstableinnovation.com/author/",
-  "sameAs": [
-    "https://www.linkedin.com/in/nelsoninno/",
-    "https://nelsoninno.com",
-    "https://wespark.io",
-    "https://yourownterms.life",
-    "https://www.youtube.com/@nelsoninno",
-    "https://x.com/nelsoninno"
-  ],
-  "image": "https://www.unstableinnovation.com/assets/images/photos/nelsoninno/nelson-inno-wespark-speaker-unstable-innovation-author.webp",
-  "jobTitle": ["Founder & CEO of WeSpark", "Author", "TEDx Speaker", "Ad-honorem Advisor"],
-  "worksFor": {
-    "@type": "Organization",
-    "name": "WeSpark",
-    "url": "https://wespark.io"
-  },
-  "knowsAbout": ["Innovation", "Entrepreneurship", "Philosophy", "Stoicism", "Game theory", "Megatrends", "Bitcoin", "Decentralization", "Education design", "AI-powered learning systems", "Workshop facilitation", "Lean Startup"],
-  "nationality": { "@type": "Country", "name": "El Salvador" },
-  "address": { "@type": "PostalAddress", "addressLocality": "San Salvador", "addressCountry": "SV" },
-  "alumniOf": [
-    { "@type": "EducationalOrganization", "name": "Furtwangen University", "address": "Germany" },
-    { "@type": "EducationalOrganization", "name": "German School of San Salvador" }
-  ],
-  "knowsLanguage": ["en", "es", "de"],
-  "description": "Nelson Inno is a Salvadoran entrepreneur, founder and CEO of WeSpark, and author of Unstable Innovation. He builds AI-powered education systems for governments, universities and Fortune-500 enterprises, and co-designed Bitcoin Diploma 2.0 with El Salvador's National Bitcoin Office. He delivered a TEDx Talk titled 'Are Schools Prepared for the Future?' and advises the government of El Salvador on technology, innovation, education and Bitcoin. His official personal website is https://nelsoninno.com.",
-  "subjectOf": {
-    "@type": "WebSite",
-    "@id": "https://nelsoninno.com/#website",
-    "url": "https://nelsoninno.com",
-    "name": "nelsoninno.com \u2014 Official personal website of Nelson Inno",
-    "inLanguage": ["en", "es"],
-    "about": { "@id": "https://nelsoninno.com/#person" }
-  }
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://nelsoninno.com/#person",
+      "name": "Nelson Inno",
+      "givenName": "Nelson",
+      "familyName": "Inno",
+      "url": "https://nelsoninno.com",
+      "mainEntityOfPage": "https://www.unstableinnovation.com/author/",
+      "sameAs": [
+        "https://www.linkedin.com/in/nelsoninno/",
+        "https://nelsoninno.com",
+        "https://wespark.io",
+        "https://yourownterms.life",
+        "https://www.youtube.com/@nelsoninno",
+        "https://x.com/nelsoninno"
+      ],
+      "image": "https://www.unstableinnovation.com/assets/images/photos/nelsoninno/nelson-inno-wespark-speaker-unstable-innovation-author.webp",
+      "jobTitle": [
+        "Founder & CEO of WeSpark",
+        "Author",
+        "TEDx Speaker",
+        "Ad-honorem Advisor"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "WeSpark",
+        "url": "https://wespark.io"
+      },
+      "knowsAbout": [
+        "Innovation",
+        "Entrepreneurship",
+        "Philosophy",
+        "Stoicism",
+        "Game theory",
+        "Megatrends",
+        "Bitcoin",
+        "Decentralization",
+        "Education design",
+        "AI-powered learning systems",
+        "Workshop facilitation",
+        "Lean Startup"
+      ],
+      "nationality": {
+        "@type": "Country",
+        "name": "El Salvador"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Salvador",
+        "addressCountry": "SV"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Furtwangen University",
+          "address": "Germany"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "German School of San Salvador"
+        }
+      ],
+      "knowsLanguage": [
+        "en",
+        "es",
+        "de"
+      ],
+      "description": "Nelson Inno is a Salvadoran entrepreneur, founder and CEO of WeSpark, and author of Unstable Innovation. He builds AI-powered education systems for governments, universities and Fortune-500 enterprises, and co-designed Bitcoin Diploma 2.0 with El Salvador's National Bitcoin Office. He delivered a TEDx Talk titled 'Are Schools Prepared for the Future?' and advises the government of El Salvador on technology, innovation, education and Bitcoin. His official personal website is https://nelsoninno.com.",
+      "subjectOf": {
+        "@type": "WebSite",
+        "@id": "https://nelsoninno.com/#website",
+        "url": "https://nelsoninno.com",
+        "name": "nelsoninno.com — Official personal website of Nelson Inno",
+        "inLanguage": [
+          "en",
+          "es"
+        ],
+        "about": {
+          "@id": "https://nelsoninno.com/#person"
+        }
+      },
+      "hasOfferCatalog": {
+        "@id": "https://nelsoninno.com/#service-catalog"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.unstableinnovation.com/#website",
+      "url": "https://www.unstableinnovation.com/",
+      "name": "Unstable Innovation",
+      "inLanguage": [
+        "en",
+        "es"
+      ],
+      "about": {
+        "@id": "https://nelsoninno.com/#person"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.unstableinnovation.com/author/#webpage",
+      "url": "https://www.unstableinnovation.com/author/",
+      "name": "Nelson Inno, author of Unstable Innovation, founder of WeSpark",
+      "isPartOf": {
+        "@id": "https://www.unstableinnovation.com/#website"
+      },
+      "about": {
+        "@id": "https://nelsoninno.com/#person"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://nelsoninno.com/#service-catalog",
+      "name": "Nelson Inno consulting services",
+      "provider": {
+        "@id": "https://nelsoninno.com/#person"
+      },
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI education, training, and implementation",
+            "description": "Institutional AI curricula, AI-fluency programs, and end-to-end AI system design for innovation, digital-transformation, and technology teams inside large enterprises and governments.",
+            "provider": {
+              "@id": "https://nelsoninno.com/#person"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Bitcoin education and implementation",
+            "description": "Institutional-grade Bitcoin education, sovereign-technology strategy, and adoption programs. Co-designer of El Salvador's national Bitcoin Diploma 2.0.",
+            "provider": {
+              "@id": "https://nelsoninno.com/#person"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Innovation and technology transformation",
+            "description": "Designing new innovation departments, workshop methodologies, and megatrends-informed strategy for large enterprises and governments.",
+            "provider": {
+              "@id": "https://nelsoninno.com/#person"
+            }
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 </head>

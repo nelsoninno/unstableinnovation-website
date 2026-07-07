@@ -1,0 +1,16 @@
+{
+  "name": "Unstable Innovation",
+  "short_name": "UnstableInnovation",
+  "description": "A book about innovation, entrepreneurship, and philosophy by Nelson Inno.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffb900",
+  "lang": "en",
+  "icons": [
+    {"src":"/favicon-192x192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"/favicon-512x512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"/apple-touch-icon.png","sizes":"180x180","type":"image/png","purpose":"any"}
+  ]
+}
