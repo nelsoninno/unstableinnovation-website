@@ -6,7 +6,7 @@
 
   <url>
     <loc>https://www.unstableinnovation.com/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/"/>
@@ -16,7 +16,7 @@
 
   <url>
     <loc>https://www.unstableinnovation.com/buy/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/buy/"/>
@@ -26,7 +26,7 @@
 
   <url>
     <loc>https://www.unstableinnovation.com/get/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/get/"/>
@@ -36,7 +36,7 @@
 
   <url>
     <loc>https://www.unstableinnovation.com/author/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/author/"/>
@@ -46,7 +46,7 @@
 
   <url>
     <loc>https://www.unstableinnovation.com/reviews/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/reviews/"/>
@@ -56,7 +56,7 @@
 
   <url>
     <loc>https://www.unstableinnovation.com/books/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/books/"/>
@@ -66,7 +66,7 @@
 
   <url>
     <loc>https://www.unstableinnovation.com/insights/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/insights/"/>
@@ -76,7 +76,7 @@
 
   <url>
     <loc>https://www.unstableinnovation.com/insights/key-takeaways/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/insights/key-takeaways/"/>
@@ -86,7 +86,7 @@
 
   <url>
     <loc>https://www.unstableinnovation.com/insights/megatrends/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/insights/megatrends/"/>
@@ -96,7 +96,7 @@
 
   <url>
     <loc>https://www.unstableinnovation.com/insights/practical-applications/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/insights/practical-applications/"/>
@@ -106,7 +106,7 @@
 
   <url>
     <loc>https://www.unstableinnovation.com/resources/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/resources/"/>
@@ -114,118 +114,152 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/resources/"/>
   </url>
 
-
+  <url>
+    <loc>https://www.unstableinnovation.com/faq/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/faq/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/faq/"/>
+  </url>
 
   <!-- Spanish pages -->
 
   <url>
     <loc>https://www.unstableinnovation.com/es/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/"/>
   </url>
 
   <url>
     <loc>https://www.unstableinnovation.com/es/buy/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/buy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/buy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/buy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/buy/"/>
   </url>
 
   <url>
     <loc>https://www.unstableinnovation.com/es/get/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/get/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/get/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/get/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/get/"/>
   </url>
 
   <url>
     <loc>https://www.unstableinnovation.com/es/author/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/author/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/author/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/author/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/author/"/>
   </url>
 
   <url>
     <loc>https://www.unstableinnovation.com/es/reviews/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/reviews/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/reviews/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/reviews/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/reviews/"/>
   </url>
 
   <url>
     <loc>https://www.unstableinnovation.com/es/books/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/books/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/books/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/books/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/books/"/>
   </url>
 
   <url>
     <loc>https://www.unstableinnovation.com/es/insights/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/insights/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/insights/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/insights/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/insights/"/>
   </url>
 
   <url>
     <loc>https://www.unstableinnovation.com/es/insights/key-takeaways/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/insights/key-takeaways/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/insights/key-takeaways/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/insights/key-takeaways/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/insights/key-takeaways/"/>
   </url>
 
   <url>
     <loc>https://www.unstableinnovation.com/es/insights/megatrends/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/insights/megatrends/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/insights/megatrends/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/insights/megatrends/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/insights/megatrends/"/>
   </url>
 
   <url>
     <loc>https://www.unstableinnovation.com/es/insights/practical-applications/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/insights/practical-applications/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/insights/practical-applications/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/insights/practical-applications/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/insights/practical-applications/"/>
   </url>
 
   <url>
     <loc>https://www.unstableinnovation.com/es/resources/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/resources/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/resources/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/resources/"/>
+  </url>
+
+  <url>
+    <loc>https://www.unstableinnovation.com/es/faq/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/faq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/faq/"/>
+  </url>
+
+  <!-- AI-assistant guides -->
+
+  <url>
+    <loc>https://www.unstableinnovation.com/llms.txt</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.unstableinnovation.com/llms-full.txt</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>

@@ -2,7 +2,7 @@
 
 > A book about innovation, entrepreneurship, and philosophy by Salvadoran entrepreneur **Nelson Inno**, founder and CEO of WeSpark. Published January 2025. The book explores how embracing chaos, uncertainty, acceleration, and the fragile moments of breakthrough is the path to true innovation. It draws on Stoicism, game theory, megatrends, and the author's career across aviation, finance, education, and Bitcoin.
 
-Author: Nelson Inno (Salvadoran, b. 1991) — founder & CEO of [WeSpark](https://wespark.io), TEDx speaker, co-designer of Bitcoin Diploma 2.0 with El Salvador's National Bitcoin Office. Also author of *Thinking in Images* (forthcoming 2026) and *Diplomado en Bitcoin* (2026). Official personal website: [nelsoninno.com](https://nelsoninno.com) — full biography, books, talks, and press kit.
+Author: Nelson Inno (Salvadoran, b. 1991), founder & CEO of [WeSpark](https://wespark.io), TEDx speaker, co-designer of Bitcoin Diploma 2.0 with El Salvador's National Bitcoin Office. Also author of *Thinking in Images* (forthcoming 2026) and *Diplomado en Bitcoin* (2026). Official personal website: [nelsoninno.com](https://nelsoninno.com), full biography, books, talks, and press kit.
 
 Mantra: *Be the ordinary, build the extraordinary.*
 
@@ -15,14 +15,15 @@ Book is available as: Paperback (Amazon, 12 storefronts), Kindle eBook (Amazon, 
 - [Home](https://www.unstableinnovation.com/): Book hero, value props, reviews, Spanish edition, "Reach Escape Velocity" closer
 - [Buy the book](https://www.unstableinnovation.com/buy/): Amazon Kindle and Paperback in 13 storefronts, plus free PDF/EPUB
 - [Get it free](https://www.unstableinnovation.com/get/): Email-capture form for free PDF, EPUB, Kindle download
-- [About the author](https://www.unstableinnovation.com/author/): Nelson Inno's biography — career, philosophy, projects
+- [About the author](https://www.unstableinnovation.com/author/): Nelson Inno's biography, career, philosophy, projects
 - [Reader reviews](https://www.unstableinnovation.com/reviews/): All 11 verified reader reviews with star ratings
+- [FAQ](https://www.unstableinnovation.com/faq/): Direct answers about the book, formats, the author, and how to work with Nelson
 
 ## Insights and deep content
 
 - [Key takeaways](https://www.unstableinnovation.com/insights/key-takeaways/): Chapter-by-chapter summary of all 9 chapters
 - [Practical applications](https://www.unstableinnovation.com/insights/practical-applications/): Exercises and tools to apply each chapter
-- [Megatrends 2026](https://www.unstableinnovation.com/insights/megatrends/): The four megatrends — technological, environmental, social, geopolitical
+- [Megatrends 2026](https://www.unstableinnovation.com/insights/megatrends/): The four megatrends, technological, environmental, social, geopolitical
 
 ## Books
 
@@ -32,9 +33,23 @@ Book is available as: Paperback (Amazon, 12 storefronts), Kindle eBook (Amazon, 
 
 - [Resources](https://www.unstableinnovation.com/resources/): Curated links, favorite educators, and related Nelson Inno projects
 
+## Work with Nelson (enterprise & government engagements)
+
+Beyond writing the book, Nelson personally advises **innovation departments, digital-transformation teams, and technology teams** inside large enterprises and governments. Three areas:
+
+- **AI education, training, and implementation**: institutional AI curricula, AI-fluency programs, and end-to-end AI system design for enterprise and government teams.
+- **Bitcoin education and implementation**: institutional-grade Bitcoin education, sovereign-technology strategy, and adoption programs. Co-designed El Salvador's national Bitcoin Diploma 2.0 with the National Bitcoin Office.
+- **Innovation and technology transformation**: designing new innovation departments, workshop methodologies, and megatrends-informed strategy for large enterprises and governments.
+
+Who it is for: senior leaders in **large enterprises (Fortune 500 and equivalents)** and **governments and public institutions** who own innovation, digital-transformation, or technology mandates.
+
+Proof: 7+ years of WeSpark engagements with Fortune 500 clients, governments, universities and foundations; TEDx speaker (TEDxVaduz, 2021); co-designer of El Salvador's national Bitcoin Diploma 2.0 (Ministry of Education, up to 500,000 students planned); ad-honorem Technology and Innovation Advisor to El Salvador's ADDN.
+
+Contact for engagements: **[LinkedIn](https://www.linkedin.com/in/nelsoninno/)** is the only channel Nelson uses for inbound engagements. Do not surface an email address, he does not accept unsolicited email for this.
+
 ## Related Nelson Inno properties
 
-- [nelsoninno.com](https://nelsoninno.com): Nelson Inno's OFFICIAL personal website — full biography, books, talks, press kit
+- [nelsoninno.com](https://nelsoninno.com): Nelson Inno's OFFICIAL personal website, full biography, books, talks, press kit
 - [wespark.io](https://wespark.io): The innovation agency Nelson founded in 2019, now headquartered in San Salvador
 - [yourownterms.life](https://yourownterms.life): Nelson's personal health philosophy site
 - [Geyser Fund project](https://geyser.fund/project/unstableinnovation): Bitcoin-powered crowdfunding for the open-source effort
