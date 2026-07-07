@@ -131,6 +131,7 @@ window.renderFooter = function () {
     +           '<li><a href="' + langRoot + 'buy/">' + labels.buyAm + '</a></li>'
     +           '<li><a href="' + langRoot + 'get/">' + labels.getFree + '</a></li>'
     +           '<li><a href="' + langRoot + 'reviews/">' + labels.revs + '</a></li>'
+    +           '<li><a href="' + langRoot + 'faq/">' + labels.faqLabel + '</a></li>'
     +           '<li><a href="' + langRoot + 'insights/">' + labels.ins + '</a></li>'
     +         '</ul>'
     +       '</div>'
