@@ -1286,11 +1286,17 @@ html[lang="es"] .site-nav a {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: rgba(255,255,255,0.75);
-  margin: 0 auto 14px;
+  /* Big bottom margin so the eyebrow sits well above the H1, closer to the top of the hero copy block */
+  margin: 0 auto clamp(48px, 8vh, 96px);
   max-width: 56ch;
   line-height: 1.4;
   text-align: center;
 }
 @media (max-width: 720px) {
-  .hero__eyebrow { font-size: 10px; letter-spacing: 0.3px; max-width: 90%; }
+  .hero__eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    max-width: 90%;
+    margin-bottom: clamp(32px, 6vh, 64px);
+  }
 }
