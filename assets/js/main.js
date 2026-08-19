@@ -64,57 +64,12 @@
       if (target) { e.preventDefault(); loadYouTube(target); }
     }
   });
+  /* ---- Email-capture form ----------------------------------
+     The subscribe form on /get/ and /es/get/ now posts natively to
+     /api/subscribe (a Cloudflare Pages Function) which stores the
+     signup in D1 and redirects to /thank-you/. No client-side handler
+     needed here. Left as documentation only. */
 
-  /* ---- Email-capture form -> Kit + redirect to /thank-you/ */
-  /* Kit / ConvertKit configuration. Replace with your real form ID once you create your free account. */
-  const KIT_FORM_ID = window.KIT_FORM_ID || "9462448";
-
-  const form = document.querySelector("#book-request-form");
-  if (form) {
-    const msg = form.querySelector(".form-message");
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      if (form.querySelector('input[name="company"]').value !== "") return; /* honeypot */
-
-      const submitBtn = form.querySelector('button[type="submit"]');
-      submitBtn.disabled = true;
-      submitBtn.dataset.originalText = submitBtn.textContent;
-      submitBtn.textContent = "Sending...";
-
-      const data = new FormData(form);
-      const email = (data.get("email") || "").toString().trim();
-      const firstName = (data.get("first_name") || "").toString().trim();
-      const roles = data.getAll("role").join(", ");
-
-      try {
-        if (KIT_FORM_ID && KIT_FORM_ID !== "REPLACE_WITH_YOUR_KIT_FORM_ID") {
-          const body = new URLSearchParams({
-            email_address: email,
-            first_name: firstName,
-            "fields[role]": roles,
-            "fields[source]": "unstableinnovation.com/get"
-          });
-          const res = await fetch(`https://api.kit.com/v3/forms/${KIT_FORM_ID}/subscribe`, {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body
-          });
-          if (!res.ok) throw new Error("Kit returned " + res.status);
-        }
-        const params = new URLSearchParams({ name: firstName });
-        location.href = "/thank-you/?" + params.toString();
-      } catch (err) {
-        if (msg) {
-          msg.textContent = "Something went wrong on our end. Please try again, or email us if it keeps happening.";
-          msg.classList.add("is-error");
-          msg.classList.remove("is-success");
-        }
-        submitBtn.disabled = false;
-        submitBtn.textContent = submitBtn.dataset.originalText;
-        console.error(err);
-      }
-    });
-  }
 
   /* ---- Personalize thank-you page with first name -------- */
   const greetingEl = document.querySelector("[data-greeting]");

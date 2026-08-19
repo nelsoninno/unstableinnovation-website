@@ -98,7 +98,9 @@ html[lang="es"] .site-nav a, html[lang="es"] .step h2.step-title { font-family: 
       <p>¿Adónde te enviamos el libro? Recibirás un correo al mes (máximo) con consejos sobre innovación. Te puedes dar de baja con un clic en cualquier momento.</p>
     </div>
 
-    <form id="book-request-form" class="form" novalidate style="margin-top:24px;">
+    <form id="book-request-form" class="form" action="/api/subscribe" method="POST" style="margin-top:24px;">
+      <input type="hidden" name="language" value="es">
+      <input type="hidden" name="source" value="unstableinnovation.com/es/get">
       <div>
         <label for="email">Correo *</label>
         <input id="email" name="email" type="email" required autocomplete="email" placeholder="nombre@ejemplo.com">
@@ -127,7 +129,7 @@ html[lang="es"] .site-nav a, html[lang="es"] .step h2.step-title { font-family: 
       <input type="text" name="company" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="form-message" role="status"></div>
       <button type="submit" class="btn btn-lg">Envíame el eBook</button>
-      <p class="text-muted" style="font-size:13px; text-align:center; margin:0;">Tu correo se guarda de forma segura con <a href="https://kit.com" rel="noopener">Kit</a>. Sin spam, sin compartir con terceros.</p>
+      <p class="text-muted" style="font-size:13px; text-align:center; margin:0;">Tu correo se guarda de forma segura en la infraestructura de Cloudflare, es de Nelson, y nunca se comparte con terceros. Te puedes dar de baja con un clic en cualquier momento.</p>
     </form>
   </div>
 </section>
@@ -148,7 +150,11 @@ html[lang="es"] .site-nav a, html[lang="es"] .step h2.step-title { font-family: 
       <h3 class="spanish-fallback" style="font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(22px, 3vw, 32px); margin-bottom: 8px;">¿Ya eres suscriptor?</h3>
       <p class="text-soft" style="margin: 0;">Ingresa tu correo para saltar el formulario y ir directo a la descarga.</p>
     </div>
-    <form id="quick-subscriber-form" novalidate style="display: flex; gap: 12px; max-width: 520px; margin-inline: auto; flex-wrap: wrap;">
+    <form id="quick-subscriber-form" action="/api/subscribe" method="POST" style="display: flex; gap: 12px; max-width: 520px; margin-inline: auto; flex-wrap: wrap;">
+      <input type="hidden" name="language" value="es">
+      <input type="hidden" name="source" value="unstableinnovation.com/es/get (skip-form)">
+      <input type="hidden" name="newsletter_consent" value="1">
+      <input type="hidden" name="linkedin_followed" value="1">
       <input id="quick-email" name="email" type="email" required autocomplete="email" placeholder="tu-correo@ejemplo.com" style="flex: 1 1 240px; padding: 14px 16px; font: inherit; border: 1.5px solid var(--color-line); border-radius: var(--radius-sm); background: #fff;">
       <button type="submit" class="btn">Ir a las descargas &rarr;</button>
       <input type="text" name="company" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -157,43 +163,8 @@ html[lang="es"] .site-nav a, html[lang="es"] .step h2.step-title { font-family: 
   </div>
 </section>
 
-<script data-cfasync="false">
-(function () {
-  var KIT_FORM_ID = "9462448";
-  // Main form
-  var form = document.getElementById("book-request-form");
-  if (form) {
-    var msg = form.querySelector(".form-message");
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      if (form.querySelector('input[name="company"]').value !== "") return;
-      var btn = form.querySelector('button[type="submit"]');
-      btn.disabled = true; btn.dataset.t = btn.textContent; btn.textContent = "Enviando...";
-      var d = new FormData(form);
-      var body = new URLSearchParams({ email_address: (d.get("email")||"").trim(), first_name: (d.get("first_name")||"").trim(), "fields[role]": d.getAll("role").join(", "), "fields[source]": "unstableinnovation.com/es/get", "fields[language]": "es" });
-      fetch("https://api.kit.com/v3/forms/" + KIT_FORM_ID + "/subscribe", { method: "POST", headers: {"Content-Type":"application/x-www-form-urlencoded"}, body: body })
-        .finally(function(){ location.href = "../thank-you/?name=" + encodeURIComponent((d.get("first_name")||"").trim()); });
-    });
-  }
-  // Skip form
-  var quick = document.getElementById("quick-subscriber-form");
-  if (quick) {
-    quick.addEventListener("submit", function (e) {
-      e.preventDefault();
-      if (quick.querySelector('input[name="company"]').value !== "") return;
-      var btn = quick.querySelector('button[type="submit"]');
-      btn.disabled = true; btn.textContent = "Verificando...";
-      var email = (document.getElementById("quick-email").value || "").trim();
-      var body = new URLSearchParams({ email_address: email, "fields[source]": "unstableinnovation.com/es/get (skip)", "fields[language]": "es" });
-      fetch("https://api.kit.com/v3/forms/" + KIT_FORM_ID + "/subscribe", { method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body: body })
-        .finally(function(){ location.href = "../thank-you/?name=Suscriptor"; });
-    });
-  }
-})();
-</script>
-
 <div id="site-footer-mount"></div>
 <script src="../../assets/js/partials.js?v=9" defer data-cfasync="false"></script>
-<script src="../../assets/js/main.js?v=7" defer data-cfasync="false"></script>
+<script src="../../assets/js/main.js?v=8" defer data-cfasync="false"></script>
 </body>
 </html>

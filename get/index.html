@@ -117,7 +117,9 @@ Tell Nelson who you are</h2>
       <p>Where should we send the book? You'll get one email per month (max) with innovation tips. Unsubscribe in one click anytime.</p>
     </div>
 
-    <form id="book-request-form" class="form" novalidate style="margin-top:24px;">
+    <form id="book-request-form" class="form" action="/api/subscribe" method="POST" style="margin-top:24px;">
+      <input type="hidden" name="language" value="en">
+      <input type="hidden" name="source" value="unstableinnovation.com/get">
 
       <div>
         <label for="email">Email *</label>
@@ -155,7 +157,7 @@ Tell Nelson who you are</h2>
 
       <button type="submit" class="btn btn-lg">Send me the eBook</button>
 
-      <p class="text-muted" style="font-size:13px; text-align:center; margin:0;">Your email is stored securely with <a href="https://kit.com" rel="noopener">Kit</a> (formerly ConvertKit). No spam, no sharing with third parties.</p>
+      <p class="text-muted" style="font-size:13px; text-align:center; margin:0;">Your email is stored securely on Cloudflare's infrastructure, owned by Nelson, never shared with any third party. Unsubscribe in one click anytime.</p>
     </form>
   </div>
 </section>
@@ -176,7 +178,11 @@ Tell Nelson who you are</h2>
       <h3 style="font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(22px, 3vw, 32px); margin-bottom: 8px;">Already a subscriber?</h3>
       <p class="text-soft" style="margin: 0;">Enter your email to skip the form and go straight to the downloads.</p>
     </div>
-    <form id="quick-subscriber-form" novalidate style="display: flex; gap: 12px; max-width: 520px; margin-inline: auto; flex-wrap: wrap;">
+    <form id="quick-subscriber-form" action="/api/subscribe" method="POST" style="display: flex; gap: 12px; max-width: 520px; margin-inline: auto; flex-wrap: wrap;">
+      <input type="hidden" name="language" value="en">
+      <input type="hidden" name="source" value="unstableinnovation.com/get (skip-form)">
+      <input type="hidden" name="newsletter_consent" value="1">
+      <input type="hidden" name="linkedin_followed" value="1">
       <input id="quick-email" name="email" type="email" required autocomplete="email" placeholder="your-email@example.com" style="flex: 1 1 240px; padding: 14px 16px; font: inherit; border: 1.5px solid var(--color-line); border-radius: var(--radius-sm); background: #fff;">
       <button type="submit" class="btn">Skip to downloads &rarr;</button>
       <input type="text" name="company" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -185,47 +191,8 @@ Tell Nelson who you are</h2>
   </div>
 </section>
 
-<script data-cfasync="false">
-(function () {
-  var form = document.getElementById("quick-subscriber-form");
-  if (!form) return;
-  var KIT_FORM_ID = "9462448";
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    if (form.querySelector('input[name="company"]').value !== "") return;
-    var emailField = document.getElementById("quick-email");
-    var msg = document.getElementById("quick-msg");
-    var btn = form.querySelector('button[type="submit"]');
-    var email = (emailField.value || "").trim();
-    if (!email) {
-      msg.textContent = "Please enter your email.";
-      msg.style.color = "#8b1f1f";
-      return;
-    }
-    btn.disabled = true;
-    btn.textContent = "Verifying...";
-    msg.style.color = "var(--color-ink-muted)";
-    msg.textContent = "Checking your subscription...";
-    var body = new URLSearchParams({
-      email_address: email,
-      "fields[source]": "unstableinnovation.com/get (already-subscriber path)"
-    });
-    fetch("https://api.kit.com/v3/forms/" + KIT_FORM_ID + "/subscribe", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: body
-    }).then(function () {
-      // Always redirect, success or fail (we don't actually need to check)
-      location.href = "../thank-you/?name=Subscriber";
-    }).catch(function () {
-      location.href = "../thank-you/?name=Subscriber";
-    });
-  });
-})();
-</script>
-
 <div id="site-footer-mount"></div>
 <script src="../assets/js/partials.js?v=9" defer data-cfasync="false"></script>
-<script src="../assets/js/main.js?v=7" defer data-cfasync="false"></script>
+<script src="../assets/js/main.js?v=8" defer data-cfasync="false"></script>
 </body>
 </html>
