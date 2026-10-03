@@ -31,6 +31,19 @@
       var m = p.match(/^(\/[^\/]+)/);
       if (m) { sitePrefix = m[1]; p = p.slice(sitePrefix.length); }
     }
+    // Pages whose Spanish address uses a Spanish slug (EN path -> ES path)
+    var SLUG_MAP = {
+      "/who-is-it-for/": "/es/para-quien-es/",
+      "/book-for-teenagers/": "/es/libro-para-adolescentes/",
+      "/book-for-young-adults/": "/es/libro-para-jovenes/",
+      "/book-for-professionals/": "/es/libro-para-profesionales/"
+    };
+    var norm = p.replace(/index\.html$/, "");
+    if (norm.charAt(norm.length - 1) !== "/") norm += "/";
+    for (var en in SLUG_MAP) {
+      if (norm === en) return sitePrefix + SLUG_MAP[en];
+      if (norm === SLUG_MAP[en]) return sitePrefix + en;
+    }
     if (p.indexOf("/es/") === 0 || p === "/es") {
       // Currently Spanish - go to English equivalent
       var enPath = p.replace(/^\/es/, "");
@@ -104,13 +117,15 @@ window.renderFooter = function () {
         bookH: "El libro", buyAm: "Comprar en Amazon", getFree: "PDF / EPUB gratis", revs: "Reseñas de lectores", ins: "Aprendizajes",
         authorH: "El autor", aboutN: "Sobre Nelson Inno", connH: "Conecta", linked: "LinkedIn", tedx: "Charla TEDx", geyser: "Geyser Fund", res: "Recursos",
         copy: "© " + (new Date().getFullYear()) + " Nelson Inno. Publicado por WeSpark.",
-        built: "Construido en El Salvador · Hospedado en GitHub Pages",
+        built: "Construido en El Salvador · Hospedado en Cloudflare",
+        faqLabel: "Preguntas frecuentes", whoLabel: "¿Para quién es?", whoSlug: "para-quien-es/",
         madeWith: "Hecho con amor, por", ekyAlt: "Everybodyknowsyou.com" }
     : { tagline: "A book about innovation, entrepreneurship, and philosophy by Nelson Inno. Published by WeSpark.",
         bookH: "The book", buyAm: "Buy on Amazon", getFree: "Free PDF / EPUB", revs: "Reader reviews", ins: "Insights",
         authorH: "The author", aboutN: "About Nelson Inno", connH: "Connect", linked: "LinkedIn", tedx: "TEDx talk", geyser: "Geyser Fund", res: "Resources",
         copy: "© " + (new Date().getFullYear()) + " Nelson Inno. Published by WeSpark.",
-        built: "Built in El Salvador · Hosted on GitHub Pages",
+        built: "Built in El Salvador · Hosted on Cloudflare",
+        faqLabel: "FAQ", whoLabel: "Who is it for?", whoSlug: "who-is-it-for/",
         madeWith: "Made with love, by", ekyAlt: "Everybodyknowsyou.com" };
 
   var el = document.getElementById("site-footer-mount");
@@ -131,6 +146,7 @@ window.renderFooter = function () {
     +           '<li><a href="' + langRoot + 'buy/">' + labels.buyAm + '</a></li>'
     +           '<li><a href="' + langRoot + 'get/">' + labels.getFree + '</a></li>'
     +           '<li><a href="' + langRoot + 'reviews/">' + labels.revs + '</a></li>'
+    +           '<li><a href="' + langRoot + labels.whoSlug + '">' + labels.whoLabel + '</a></li>'
     +           '<li><a href="' + langRoot + 'faq/">' + labels.faqLabel + '</a></li>'
     +           '<li><a href="' + langRoot + 'insights/">' + labels.ins + '</a></li>'
     +         '</ul>'
