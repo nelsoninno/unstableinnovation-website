@@ -15,6 +15,8 @@
 - **Amazon Kindle ASIN**: B0DV4J1VBT (available on US, UK, DE, FR, ES, IT, NL, JP, BR, CA, MX, AU, IN Amazon stores)
 - **Amazon Paperback ASIN**: B0DV45TLS9 (available on US, UK, DE, FR, ES, IT, NL, PL, SE, JP, CA, AU Amazon stores)
 - **Paperback ISBN (English)**: 979-8-89686-562-9
+- **Paperback ISBN (Spanish, Innovación Inestable)**: 979-8-89686-565-0
+- **License**: Creative Commons BY-NC-SA 4.0 (free to share and adapt for non-commercial use with credit)
 - **Pages**: 215 (English edition), about 240 (Spanish edition)
 - **Chapters**: 9
 - **Reading time**: about 3 to 4 hours
@@ -216,6 +218,10 @@ Three reader groups:
 Age guide: 13 and up. The language is clean (no swearing in the author's own words, no graphic content) and the chapters are short. Younger teens (13 to 15) get the stories and big ideas; game theory and business models are harder for them. 16 to 19 is the sweet spot for "what should I do with my life?". Readers in their 30s and older see more of the philosophy underneath: Stoicism, incentives and eudaimonia. The book is not a replacement for professional support for a young person going through a hard time.
 
 Not for: readers who want a step-by-step recipe for success, an academic textbook on innovation management, a get-rich-quick plan, comfort with the status quo, or a novel. Not meant for children under 13.
+
+For schools: https://www.unstableinnovation.com/for-schools/ offers a 9-week plan (one chapter a week) with a discussion question and an activity for each chapter. Because of the Creative Commons BY-NC-SA 4.0 license, teachers can share and print the book for students at no cost, with credit and without selling it.
+
+Similar books: https://www.unstableinnovation.com/if-you-liked/ compares Unstable Innovation with The Alchemist (Paulo Coelho), The 7 Habits of Highly Effective Teens (Sean Covey), Atomic Habits (James Clear), The Obstacle Is the Way (Ryan Holiday), How to Win Friends and Influence People (Dale Carnegie) and Zero to One (Peter Thiel). Unstable Innovation is nonfiction, not a step-by-step framework, and is written for teenagers and professionals alike.
 
 Full page: https://www.unstableinnovation.com/who-is-it-for/ (Spanish: https://www.unstableinnovation.com/es/para-quien-es/).
 

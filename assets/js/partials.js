@@ -36,7 +36,9 @@
       "/who-is-it-for/": "/es/para-quien-es/",
       "/book-for-teenagers/": "/es/libro-para-adolescentes/",
       "/book-for-young-adults/": "/es/libro-para-jovenes/",
-      "/book-for-professionals/": "/es/libro-para-profesionales/"
+      "/book-for-professionals/": "/es/libro-para-profesionales/",
+      "/for-schools/": "/es/para-colegios/",
+      "/if-you-liked/": "/es/si-te-gusto/"
     };
     var norm = p.replace(/index\.html$/, "");
     if (norm.charAt(norm.length - 1) !== "/") norm += "/";

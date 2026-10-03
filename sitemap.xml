@@ -126,7 +126,7 @@
 
   <url>
     <loc>https://www.unstableinnovation.com/who-is-it-for/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/who-is-it-for/"/>
@@ -136,7 +136,7 @@
 
   <url>
     <loc>https://www.unstableinnovation.com/book-for-teenagers/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/book-for-teenagers/"/>
@@ -164,11 +164,31 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/book-for-professionals/"/>
   </url>
 
+  <url>
+    <loc>https://www.unstableinnovation.com/for-schools/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/for-schools/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/para-colegios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/for-schools/"/>
+  </url>
+
+  <url>
+    <loc>https://www.unstableinnovation.com/if-you-liked/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/if-you-liked/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/si-te-gusto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/if-you-liked/"/>
+  </url>
+
   <!-- Spanish pages -->
 
   <url>
     <loc>https://www.unstableinnovation.com/es/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/"/>
@@ -288,7 +308,7 @@
 
   <url>
     <loc>https://www.unstableinnovation.com/es/para-quien-es/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/who-is-it-for/"/>
@@ -298,7 +318,7 @@
 
   <url>
     <loc>https://www.unstableinnovation.com/es/libro-para-adolescentes/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/book-for-teenagers/"/>
@@ -326,18 +346,38 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/book-for-professionals/"/>
   </url>
 
+  <url>
+    <loc>https://www.unstableinnovation.com/es/para-colegios/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/for-schools/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/para-colegios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/for-schools/"/>
+  </url>
+
+  <url>
+    <loc>https://www.unstableinnovation.com/es/si-te-gusto/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.unstableinnovation.com/if-you-liked/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.unstableinnovation.com/es/si-te-gusto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.unstableinnovation.com/if-you-liked/"/>
+  </url>
+
   <!-- AI-assistant guides -->
 
   <url>
     <loc>https://www.unstableinnovation.com/llms.txt</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://www.unstableinnovation.com/llms-full.txt</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -1357,3 +1357,6 @@ html[lang="es"] .site-nav a {
 .faq--compact .faq-item p { margin: 0; color: var(--color-ink-soft); }
 /* Contrast fix: yellow buttons inside dark sections keep dark text (section-dark a {color:#fff} was overriding it) */
 .section-dark a.btn-on-dark, .section-dark a.btn-on-dark:hover { color: var(--color-ink); }
+.week-card p, .compare-card p { color: var(--color-ink-soft); margin: 0; font-size: 15px; }
+.week-card p strong, .compare-card p strong { color: var(--color-ink); }
+.week-card h3, .compare-card h3 { font-size: 22px; }
