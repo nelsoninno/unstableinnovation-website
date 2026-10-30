@@ -29,7 +29,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
-<link rel="stylesheet" href="../assets/css/styles.css?v=14">
+<link rel="stylesheet" href="../assets/css/styles.css?v=15">
 <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/Unstable-Regular.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/Roboto-Regular.woff2" crossorigin>
 <style>
@@ -113,7 +113,7 @@
 </head>
 <body>
 
-<div id="site-header-mount"></div>
+<header class="site-header"><div class="container site-header__inner"><a href="../es/" class="site-logo" aria-label="Unstable Innovation"><img src="../assets/images/og/unstable-innovation-logo-vector-nelson-inno.svg" alt="Unstable Innovation" width="38" height="38"></a><button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button><nav class="site-nav" aria-label="Primary"><a href="../es/" data-path="/">Inicio</a><a href="../es/buy/" data-path="/buy">Comprar</a><a href="../es/get/" data-path="/get">Descarga gratis</a><a href="../es/insights/" data-path="/insights">Aprendizajes</a><a href="../es/books/" data-path="/books">Libros</a><a href="../es/author/" data-path="/author">Autor</a><a href="../es/reviews/" data-path="/reviews">Reseñas</a></nav><div class="lang-toggle" role="group" aria-label="Language"><a href="/" class="" aria-label="English"><span class="flag flag-en" aria-hidden="true"></span>EN</a><a href="#" class="is-active" aria-label="Español" aria-current="page"><span class="flag flag-es" aria-hidden="true"></span>ES</a></div></div></header>
 
 <section class="hero" aria-label="Conviértete en innovador">
   <div class="hero__media">
@@ -123,8 +123,8 @@
   </div>
   <div class="hero__overlay"></div>
   <div class="hero__inner">
-    <p class="hero__eyebrow spanish-fallback" aria-label="Sobre el libro">Innovación Inestable, un libro sobre innovación, emprendimiento y filosofía</p>
-    <h1 class="spanish-fallback" aria-label="Conviértete en innovador y transforma tu vida hoy">Conviértete en <span class="accent">innovador</span><br>y transforma tu vida hoy</h1>
+    <h1 class="hero__eyebrow">Innovación Inestable, del autor salvadoreño Nelson Inno, es un libro sobre innovación, creatividad, emprendimiento y filosofía estoica para adolescentes curiosos, jóvenes y profesionales que quieren construir algo propio.</h1>
+    <p class="hero__title spanish-fallback">Conviértete en <span class="accent">innovador</span><br>y transforma tu vida hoy</p>
     <p class="hero__sub spanish-fallback">Un libro sobre innovación, emprendimiento y filosofía por Nelson Inno, emprendedor salvadoreño, cofundador y CEO de WeSpark y orador TEDx. <em>Abraza el caos. Aprovecha el momento. Alcanza la velocidad de escape.</em></p>
     <div class="hero__cta">
       <a class="btn btn-lg btn-on-dark" href="buy/">Comprar el libro</a>
@@ -239,10 +239,61 @@
         <h2 class="spanish-fallback">Nelson Inno</h2>
         <p class="lead spanish-fallback">Emprendedor salvadoreño, cofundador y CEO de <a href="https://wespark.io">WeSpark</a>, orador TEDx, y autor de <em>Innovación Inestable</em>. Nelson construye sistemas de educación con IA para gobiernos y empresas Fortune 500, y co-diseñó el Diploma Bitcoin 2.0 de El Salvador con la Oficina Nacional de Bitcoin del país.</p>
         <p class="spanish-fallback">Su carrera va desde los departamentos de innovación de Lufthansa en Frankfurt, una ingeniería en Furtwangen, hasta asesor ad-honorem de la agencia nacional de planificación estratégica de El Salvador. En todo eso, un mantra: <em>Sé el ordinario, construye lo extraordinario.</em></p>
-        <div class="mt-md">
+        <div class="mt-md" style="display:flex; gap:12px; flex-wrap:wrap;">
           <a class="btn btn-secondary" href="author/">Lee la biografía completa</a>
+          <a class="btn" href="https://www.linkedin.com/in/nelsoninno/" rel="noopener" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right:6px;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Síguelo en LinkedIn
+          </a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-card-bg">
+  <div class="container">
+    <div class="text-center mb-lg">
+      <span class="eyebrow">Reseñas de lectores</span>
+      <h2 class="spanish-fallback">Lo que dicen los lectores</h2>
+      <p class="aggregate-rating" style="margin-top:16px;">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span><strong>5.0</strong> · 12 reseñas verificadas en Amazon y Goodreads</span>
+      </p>
+      <p class="text-soft" style="font-size:14px; margin-top:8px;">Reseñas traducidas al español por el equipo de WeSpark.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="review__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <div class="review__title">El mejor libro sobre innovación que he leído</div>
+        <p>No tienes que ser innovador para apreciar este libro. Ya sea que seas alguien con ideas, o simplemente conozcas y ames a uno, disfrutarás este vistazo a las mentes de las personas que hacen que las cosas pasen.</p>
+        <p class="review__author">Momster</p>
+        <p class="review__meta">Amazon US, abril 2025 · Compra verificada</p>
+      </article>
+      <article class="review">
+        <div class="review__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <div class="review__title">Lectura obligada para arrancar la creatividad</div>
+        <p>Algunos libros te dan información, otros te inspiran. Innovación Inestable hace ambas cosas, sin esfuerzo. Tanto si ya prosperas en la innovación como si te sientes creativamente estancado, este libro te da un empujón en la dirección correcta.</p>
+        <p class="review__author">Bryan Cassady</p>
+        <p class="review__meta">Amazon US, febrero 2025 · Compra verificada</p>
+      </article>
+      <article class="review">
+        <div class="review__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <div class="review__title">Abraza la incertidumbre y toma acción</div>
+        <p>¡Recomiendo este libro a emprendedores, innovadores, estudiantes o cualquiera buscando su camino en este momento! Te ayudará a ver la innovación desde una nueva perspectiva y a liberarte de los marcos corporativos que a menudo nos encajonan.</p>
+        <p class="review__author">Aliya A</p>
+        <p class="review__meta">Amazon Alemania, febrero 2025 · Compra verificada</p>
+      </article>
+      <article class="review">
+        <div class="review__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <div class="review__title">Ideas geniales, entretenido y fácil de leer</div>
+        <p>Uno de los libros más amigables sobre innovación que he leído últimamente. Muy fácil de leer, rápido y entretenido. Ofrece abundantes ideas, recursos y ejemplos.</p>
+        <p class="review__author">Luis Lopez-Portillo</p>
+        <p class="review__meta">Amazon US, enero 2025 · Compra verificada</p>
+      </article>
+    </div>
+    <div class="text-center mt-md">
+      <a class="btn btn-secondary" href="reviews/">Leer todas las reseñas</a>
     </div>
   </div>
 </section>
@@ -258,6 +309,20 @@
   </div>
 </section>
 
+<section class="section section-card-bg">
+  <div class="container container-narrow">
+    <div class="faq faq--compact" aria-labelledby="home-faq-title">
+      <h2 id="home-faq-title" class="spanish-fallback">Preguntas frecuentes</h2>
+      <div class="faq-item"><h3 class="spanish-fallback">¿Es Innovación Inestable un buen libro para un adolescente que se siente diferente o que quiere construir cosas?</h3><p>Sí, para adolescentes curiosos desde los 13 años que lo cuestionan todo, se sienten un poco fuera de lugar o quieren construir algo propio. El libro llama a los innovadores los raros que no encajan, y Nelson cuenta cómo creció sintiéndose incomprendido y aprendió habilidades reales con pasatiempos y videojuegos. No es un libro de texto ni una guía de carrera paso a paso. Es un libro corto y honesto sobre la mentalidad que hay detrás de construir cosas. Mira <a href="libro-para-adolescentes/">Innovación Inestable para adolescentes</a>.</p></div>
+      <div class="faq-item"><h3 class="spanish-fallback">¿Es un libro práctico para empezar proyectos nuevos y ser creativo en el trabajo?</h3><p>Trae herramientas cortas y concretas que puedes usar de inmediato: siete preguntas para probar una idea con personas reales antes de construirla, matar tu primera idea, hacer prototipos con IA, SCAMPER, el Design Sprint, el Business Model Canvas y ocho habilidades que todo innovador necesita. Cada herramienta tiene una explicación corta, no es un cuaderno de ejercicios. El centro del libro es la mentalidad para empezar cosas nuevas, por tu cuenta o dentro de la empresa donde trabajas. Mira <a href="libro-para-profesionales/">Innovación Inestable para profesionales</a>.</p></div>
+      <div class="faq-item"><h3 class="spanish-fallback">Me siento estancado en la vida. ¿Me puede ayudar este libro?</h3><p>Fue escrito para personas que sienten las ganas de construir pero se estancan. Los capítulos sobre la incertidumbre, quedarse estancado y el fracaso comparten las prácticas que Nelson usa cuando las cosas salen mal, y los últimos capítulos traen la filosofía estoica (Epicteto, Séneca) para enfocarte en lo que sí puedes controlar y definir el éxito por ti mismo. Es un libro de ideas y prácticas sencillas, no un programa de autoayuda paso a paso.</p></div>
+      <div class="faq-item"><h3 class="spanish-fallback">¿Dónde compro el libro en El Salvador?</h3><p>El libro impreso está en todas las tiendas de Librería Internacional de El Salvador y en Amazon en todo el mundo. Las versiones PDF, EPUB y Kindle son gratis en este sitio. Solo te pedimos tu nombre. <a href="get/">Léelo gratis</a> o <a href="buy/">compra el impreso</a>.</p></div>
+      <div class="faq-item"><h3 class="spanish-fallback">¿Quién escribió Innovación Inestable?</h3><p>Nelson Inno, emprendedor salvadoreño, cofundador y CEO de WeSpark, cofundador y CTO de everybodyknowsyou, y orador TEDx. <a href="author/">Lee su biografía</a>.</p></div>
+    </div>
+    <p class="text-center mt-md"><a href="faq/">Más preguntas y respuestas</a></p>
+  </div>
+</section>
+
 <section class="section section-dark">
   <div class="container container-narrow text-center">
     <h2 class="spanish-fallback" style="font-size:clamp(48px, 8vw, 88px);">Alcanza la <span style="color:var(--color-accent)">velocidad</span> de escape</h2>
@@ -270,8 +335,8 @@
   </div>
 </section>
 
-<div id="site-footer-mount"></div>
-<script src="../assets/js/partials.js?v=11" defer></script>
+<footer class="site-footer"><div class="container"><div class="site-footer__grid"><div><a href="../es/" class="site-logo" style="color:#fff"><img src="../assets/images/og/unstable-innovation-logo-vector-nelson-inno.svg" alt="Unstable Innovation" width="38" height="38" style="filter:brightness(0) invert(1)"></a><p style="margin-top:16px;max-width:36ch;color:#a8a8a8;font-size:14px;">Un libro sobre innovación, emprendimiento y filosofía por Nelson Inno. Publicado por WeSpark.</p></div><div><h5>El libro</h5><ul><li><a href="../es/buy/">Comprar en Amazon</a></li><li><a href="../es/get/">PDF / EPUB gratis</a></li><li><a href="../es/reviews/">Reseñas de lectores</a></li><li><a href="../es/para-quien-es/">¿Para quién es?</a></li><li><a href="../es/faq/">Preguntas frecuentes</a></li><li><a href="../es/insights/">Aprendizajes</a></li></ul></div><div><h5>El autor</h5><ul><li><a href="../es/author/">Sobre Nelson Inno</a></li><li><a href="https://nelsoninno.com" rel="noopener">nelsoninno.com</a></li><li><a href="https://wespark.io" rel="noopener">WeSpark</a></li><li><a href="https://yourownterms.life" rel="noopener">Your Own Terms</a></li></ul></div><div><h5>Conecta</h5><ul><li><a href="https://www.linkedin.com/in/nelsoninno/" rel="noopener">LinkedIn</a></li><li><a href="https://youtu.be/trEo4g7MIUU" rel="noopener">Charla TEDx</a></li><li><a href="https://geyser.fund/project/unstableinnovation" rel="noopener">Geyser Fund</a></li><li><a href="../es/resources/">Recursos</a></li></ul></div></div><div class="site-footer__made-with-love" style="display:flex; align-items:center; justify-content:center; gap:10px; padding:18px 0 6px; border-top:1px solid rgba(255,255,255,0.08); flex-wrap:wrap; color:#a8a8a8; font-size:13px;"><span>Hecho con amor, por</span><a href="https://everybodyknowsyou.com/" rel="noopener" target="_blank" aria-label="Everybodyknowsyou.com" style="display:inline-flex; align-items:center; gap:8px; color:#fff; text-decoration:none; line-height:1;"><img src="../assets/images/logos-featured-on/eky-logo-complete-forblackbackground.png" alt="Everybodyknowsyou.com logo" width="170" height="32" loading="lazy" style="height:32px; width:auto; display:block;"><span>everybodyknowsyou.com</span></a></div><div class="site-footer__bottom"><span>© <span data-year>2026</span> Nelson Inno. Publicado por WeSpark.</span><span>Construido en El Salvador · Hospedado en Cloudflare</span></div></div></footer>
+<script src="../assets/js/partials.js?v=12" defer></script>
 <script src="../assets/js/main.js?v=8" defer></script>
 </body>
 </html>

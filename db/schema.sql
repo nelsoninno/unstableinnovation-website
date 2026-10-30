@@ -18,3 +18,17 @@ CREATE TABLE IF NOT EXISTS subscribers (
 CREATE UNIQUE INDEX IF NOT EXISTS idx_subscribers_email ON subscribers(email);
 CREATE INDEX IF NOT EXISTS idx_subscribers_created_at ON subscribers(created_at);
 CREATE INDEX IF NOT EXISTS idx_subscribers_language ON subscribers(language);
+
+-- Added Oct 2026. Both are also created automatically by /api/subscribe.
+-- ALTER TABLE subscribers ADD COLUMN last_name TEXT;
+-- One row per click on "Download the book" (first name required, the rest optional).
+CREATE TABLE IF NOT EXISTS book_requests (
+  id         INTEGER PRIMARY KEY AUTOINCREMENT,
+  first_name TEXT NOT NULL,
+  last_name  TEXT,
+  email      TEXT,
+  roles      TEXT,
+  language   TEXT NOT NULL DEFAULT 'en',
+  source     TEXT,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);

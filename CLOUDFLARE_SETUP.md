@@ -75,7 +75,14 @@ https://www.unstableinnovation.com/api/subscribers.csv?key=YOUR_ADMIN_KEY
 The file downloads as `unstable-innovation-subscribers-YYYY-MM-DD.csv` with
 every field the form captured, plus IP, user agent, and timestamp.
 
-Bookmark it. That is the whole admin.
+**To see every book request** (one row per click on "Download the book", first
+name always, last name, email and role when given), add `&list=requests`:
+
+```
+https://www.unstableinnovation.com/api/subscribers.csv?key=YOUR_ADMIN_KEY&list=requests
+```
+
+Bookmark both. That is the whole admin.
 
 ## Files in this repo that power the stack
 

@@ -2,85 +2,111 @@
  * POST /api/subscribe
  *
  * Body: application/x-www-form-urlencoded from /get/ or /es/get/
- * Fields: email, first_name, role (multi), linkedin_followed, newsletter_consent,
- *         language (hidden), source (hidden), company (honeypot)
+ * Fields: first_name (required), last_name, email, role (multi) (optional)
+ * Hidden: language, source, company (honeypot)
  *
  * Behavior:
- *   - Reject if honeypot filled.
- *   - Require email + newsletter_consent.
- *   - Insert into D1 `subscribers` table (upsert on email conflict, updates fields).
- *   - Redirect to /thank-you/?name=X (or /es/thank-you/?name=X).
+ *   - Every request is saved in D1 table `book_requests` (one row per click),
+ *     so the number of rows is the number of people who asked for the book.
+ *   - If an email is given, it is also saved in `subscribers` (upsert on email).
+ *     Giving an email means "send me news about the book" (once or twice a year).
+ *   - Missing first name or an invalid email sends the visitor back to the form.
+ *   - Then redirect to /thank-you/?name=X (or /es/thank-you/?name=X).
  *
- * On any failure, still redirect to thank-you so the user is not blocked,
- * but log the failure via console.error which surfaces in Cloudflare Pages logs.
+ * Export: /api/subscribers.csv?key=ADMIN_KEY&list=requests  (all requests)
+ *         /api/subscribers.csv?key=ADMIN_KEY                (emails only)
+ *
+ * On any failure, still redirect to thank-you so the visitor is never blocked,
+ * and log the failure via console.error (visible in Cloudflare Pages logs).
  */
+
+let schemaChecked = false;
+
+async function ensureSchema(db) {
+  if (schemaChecked) return;
+  await db.prepare(
+    `CREATE TABLE IF NOT EXISTS book_requests (
+       id         INTEGER PRIMARY KEY AUTOINCREMENT,
+       first_name TEXT NOT NULL,
+       last_name  TEXT,
+       email      TEXT,
+       roles      TEXT,
+       language   TEXT NOT NULL DEFAULT 'en',
+       source     TEXT,
+       created_at TEXT NOT NULL DEFAULT (datetime('now'))
+     )`
+  ).run();
+  // last_name was added to subscribers in Oct 2026. Adding it twice throws "duplicate column", which is fine.
+  try { await db.prepare("ALTER TABLE subscribers ADD COLUMN last_name TEXT").run(); } catch (_) {}
+  schemaChecked = true;
+}
+
 export async function onRequestPost(context) {
   const { request, env } = context;
+  let language = "en";
   try {
     const form = await request.formData();
+    language = ((form.get("language") || "en").toString().trim().toLowerCase() === "es") ? "es" : "en";
 
-    // Honeypot: silently redirect if a bot filled the hidden company field.
+    // Honeypot: a bot filled the hidden company field. Send it on without storing anything.
     if ((form.get("company") || "").toString().trim() !== "") {
-      return Response.redirect(new URL("/thank-you/", request.url).toString(), 303);
+      return redirectToThankYou(request, language, "");
     }
 
-    const email = (form.get("email") || "").toString().trim().toLowerCase();
-    const firstName = (form.get("first_name") || "").toString().trim();
-    const roles = form.getAll("role").map(v => v.toString().trim()).filter(Boolean).join(", ");
-    const language = ((form.get("language") || "en").toString().trim().toLowerCase() === "es") ? "es" : "en";
-    const source = (form.get("source") || "").toString().trim() || `unstableinnovation.com/${language === "es" ? "es/" : ""}get`;
-    const linkedinFollowed = form.get("linkedin_followed") ? 1 : 0;
-    const newsletterConsent = form.get("newsletter_consent") ? 1 : 0;
+    const firstName = (form.get("first_name") || "").toString().trim().slice(0, 80);
+    const lastName = (form.get("last_name") || "").toString().trim().slice(0, 80);
+    const email = (form.get("email") || "").toString().trim().toLowerCase().slice(0, 200);
+    const roles = form.getAll("role").map(v => v.toString().trim().slice(0, 40)).filter(Boolean).join(", ");
+    const source = (form.get("source") || "").toString().trim().slice(0, 120)
+      || `unstableinnovation.com/${language === "es" ? "es/" : ""}get`;
 
-    // Basic validation
-    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRe.test(email)) {
+    if (!firstName) return redirectWithError(request, language, "name_required");
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return redirectWithError(request, language, "invalid_email");
     }
-    if (!newsletterConsent) {
-      return redirectWithError(request, language, "consent_required");
-    }
-
-    // Metadata for record-keeping
-    const ip = request.headers.get("CF-Connecting-IP") || "";
-    const userAgent = request.headers.get("user-agent") || "";
 
     if (env.DB) {
-      // D1 upsert: SQLite UPSERT syntax
+      await ensureSchema(env.DB);
       await env.DB.prepare(
-        `INSERT INTO subscribers
-           (email, first_name, roles, language, source, linkedin_followed, newsletter_consent, ip, user_agent)
-         VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)
-         ON CONFLICT(email) DO UPDATE SET
-           first_name         = COALESCE(NULLIF(excluded.first_name, ''), first_name),
-           roles              = COALESCE(NULLIF(excluded.roles, ''),      roles),
-           language           = excluded.language,
-           source             = excluded.source,
-           linkedin_followed  = MAX(subscribers.linkedin_followed, excluded.linkedin_followed),
-           newsletter_consent = MAX(subscribers.newsletter_consent, excluded.newsletter_consent),
-           ip                 = excluded.ip,
-           user_agent         = excluded.user_agent`
-      )
-      .bind(email, firstName, roles, language, source, linkedinFollowed, newsletterConsent, ip, userAgent)
-      .run();
+        `INSERT INTO book_requests (first_name, last_name, email, roles, language, source)
+         VALUES (?1, ?2, ?3, ?4, ?5, ?6)`
+      ).bind(firstName, lastName, email, roles, language, source).run();
+
+      if (email) {
+        const ip = request.headers.get("CF-Connecting-IP") || "";
+        const userAgent = (request.headers.get("user-agent") || "").slice(0, 300);
+        await env.DB.prepare(
+          `INSERT INTO subscribers
+             (email, first_name, last_name, roles, language, source, linkedin_followed, newsletter_consent, ip, user_agent)
+           VALUES (?1, ?2, ?3, ?4, ?5, ?6, 0, 1, ?7, ?8)
+           ON CONFLICT(email) DO UPDATE SET
+             first_name         = COALESCE(NULLIF(excluded.first_name, ''), first_name),
+             last_name          = COALESCE(NULLIF(excluded.last_name, ''),  last_name),
+             roles              = COALESCE(NULLIF(excluded.roles, ''),      roles),
+             language           = excluded.language,
+             source             = excluded.source,
+             newsletter_consent = 1,
+             ip                 = excluded.ip,
+             user_agent         = excluded.user_agent`
+        ).bind(email, firstName, lastName, roles, language, source, ip, userAgent).run();
+      }
     } else {
-      // No DB binding: log so we notice in Cloudflare Pages logs, but do not block the user.
-      console.error("[subscribe] D1 binding 'DB' is missing. Signup captured but NOT stored:", {
-        email, firstName, roles, language, source
-      });
+      console.error("[subscribe] D1 binding 'DB' is missing. Request NOT stored:", { language, source });
     }
 
-    // Success: redirect to thank-you with first name in query string
-    const thankYouPath = language === "es" ? "/es/thank-you/" : "/thank-you/";
-    const params = new URLSearchParams();
-    if (firstName) params.set("name", firstName);
-    const dest = new URL(thankYouPath + (params.toString() ? `?${params}` : ""), request.url);
-    return Response.redirect(dest.toString(), 303);
+    return redirectToThankYou(request, language, firstName);
   } catch (err) {
     console.error("[subscribe] unhandled error:", err && err.stack || err);
-    // Still redirect to thank-you so the user is not stuck on an error page
-    return Response.redirect(new URL("/thank-you/", request.url).toString(), 303);
+    return redirectToThankYou(request, language, "");
   }
+}
+
+function redirectToThankYou(request, language, firstName) {
+  const path = language === "es" ? "/es/thank-you/" : "/thank-you/";
+  const params = new URLSearchParams();
+  if (firstName) params.set("name", firstName);
+  const dest = new URL(path + (params.toString() ? `?${params}` : ""), request.url);
+  return Response.redirect(dest.toString(), 303);
 }
 
 function redirectWithError(request, language, code) {

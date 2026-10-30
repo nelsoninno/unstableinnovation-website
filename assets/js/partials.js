@@ -1,5 +1,10 @@
 /* ============================================================
    Shared header + footer.
+   Since Oct 2026 the header and footer are ALSO written into every page as
+   plain HTML, so search engines and AI crawlers that do not run JavaScript
+   see the menu and footer links. The render functions below only run on pages
+   that still have the mount divs (404.html, which is served at any address).
+   When you change the menu or footer: change it here AND in every page's HTML.
    Detects whether we are in /es/ and renders Spanish or English nav.
    The yellow flag-toggle is the only way to switch languages.
    ============================================================ */
@@ -191,4 +196,10 @@ window.renderFooter = function () {
 document.addEventListener("DOMContentLoaded", function () {
   if (typeof renderHeader === "function") renderHeader();
   if (typeof renderFooter === "function") renderFooter();
+});
+
+// Keep the footer year current on the pages where the footer is plain HTML.
+document.addEventListener("DOMContentLoaded", function () {
+  var y = document.querySelector("[data-year]");
+  if (y) y.textContent = new Date().getFullYear();
 });

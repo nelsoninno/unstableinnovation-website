@@ -35,13 +35,30 @@ export async function onRequestGet(context) {
     return new Response("D1 binding 'DB' is missing.", { status: 503, headers: { "content-type": "text/plain; charset=utf-8" } });
   }
 
+  // ?list=requests exports every book request (one row per click on "Download the book").
+  const isRequests = url.searchParams.get("list") === "requests";
+  if (isRequests) {
+    let rows = [];
+    try {
+      rows = (await env.DB.prepare(`SELECT * FROM book_requests ORDER BY created_at DESC`).all()).results || [];
+    } catch (_) { /* table is created by the first request */ }
+    const rcols = ["id","first_name","last_name","email","roles","language","source","created_at"];
+    const rlines = [rcols.join(",")].concat(rows.map(r => rcols.map(c => csvCell(r[c])).join(",")));
+    return new Response(rlines.join("\n") + "\n", {
+      status: 200,
+      headers: {
+        "content-type": "text/csv; charset=utf-8",
+        "content-disposition": `attachment; filename="unstable-innovation-book-requests-${new Date().toISOString().slice(0,10)}.csv"`,
+        "cache-control": "no-store",
+      },
+    });
+  }
+
   const { results } = await env.DB.prepare(
-    `SELECT id, email, first_name, roles, language, source,
-            linkedin_followed, newsletter_consent, ip, user_agent, created_at
-     FROM subscribers ORDER BY created_at DESC`
+    `SELECT * FROM subscribers ORDER BY created_at DESC`
   ).all();
 
-  const cols = ["id","email","first_name","roles","language","source","linkedin_followed","newsletter_consent","ip","user_agent","created_at"];
+  const cols = ["id","email","first_name","last_name","roles","language","source","linkedin_followed","newsletter_consent","ip","user_agent","created_at"];
   const lines = [cols.join(",")];
   for (const row of (results || [])) {
     lines.push(cols.map(c => csvCell(row[c])).join(","));

@@ -11,7 +11,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
-<link rel="stylesheet" href="../assets/css/styles.css?v=14">
+<link rel="stylesheet" href="../assets/css/styles.css?v=15">
 <style>
 .download-card {
   background:#fff; border:2px solid var(--color-ink); border-radius:var(--radius-md);
@@ -25,13 +25,13 @@
 </style>
 </head>
 <body>
-<div id="site-header-mount"></div>
+<header class="site-header"><div class="container site-header__inner"><a href="../" class="site-logo" aria-label="Unstable Innovation"><img src="../assets/images/og/unstable-innovation-logo-vector-nelson-inno.svg" alt="Unstable Innovation" width="38" height="38"></a><button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button><nav class="site-nav" aria-label="Primary"><a href="../" data-path="/">Home</a><a href="../buy/" data-path="/buy">Buy</a><a href="../get/" data-path="/get">Free download</a><a href="../insights/" data-path="/insights">Insights</a><a href="../books/" data-path="/books">Books</a><a href="../author/" data-path="/author">Author</a><a href="../reviews/" data-path="/reviews">Reviews</a></nav><div class="lang-toggle" role="group" aria-label="Language"><a href="#" class="is-active" aria-label="English" aria-current="page"><span class="flag flag-en" aria-hidden="true"></span>EN</a><a href="/es/thank-you/" class="" aria-label="Español"><span class="flag flag-es" aria-hidden="true"></span>ES</a></div></div></header>
 
 <section class="page-hero">
   <div class="container container-narrow">
     <span class="eyebrow">You're in</span>
     <h1>Thank you<span data-greeting style="display:none"></span>!</h1>
-    <p>Welcome to Spark News. Below are your downloads in three formats, pick whichever works for your device.</p>
+    <p>Here is your copy in three formats. On a phone, the PDF is the easiest.</p>
   </div>
 </section>
 
@@ -42,7 +42,7 @@
         <div class="download-card__icon">PDF</div>
         <div class="download-card__body">
           <strong>Unstable Innovation, PDF</strong>
-          <p>Opens on any device, perfect for desktop and tablet reading. ~24 MB.</p>
+          <p>Opens on any device. Best for phones, tablets and computers. About 7 MB.</p>
         </div>
         <span class="btn">Download</span>
       </a>
@@ -51,7 +51,7 @@
         <div class="download-card__icon">EPUB</div>
         <div class="download-card__body">
           <strong>Unstable Innovation, EPUB</strong>
-          <p>Best for e-readers (Kobo, Apple Books, etc.) and reading apps. ~7 MB.</p>
+          <p>Best for e-readers (Kobo, Apple Books, etc.) and reading apps. Also the file to use with Send to Kindle. About 25 MB.</p>
         </div>
         <span class="btn">Download</span>
       </a>
@@ -60,11 +60,20 @@
         <div class="download-card__icon">AZW3</div>
         <div class="download-card__body">
           <strong>Unstable Innovation, Kindle</strong>
-          <p>For Amazon Kindle devices. Send to your Kindle via "Send-to-Kindle". ~25 MB.</p>
+          <p>For Amazon Kindle e-readers. Copy it to your Kindle with a USB cable. About 24 MB.</p>
         </div>
         <span class="btn">Download</span>
       </a>
     </div>
+  </div>
+</section>
+
+<section class="section-tight" style="background: var(--color-card);">
+  <div class="container container-narrow text-center">
+    <span class="eyebrow">Optional</span>
+    <h2>Liked it? Follow Nelson on LinkedIn</h2>
+    <p class="text-soft" style="max-width:56ch; margin-inline:auto;">That is where Nelson shares what he is building next. One click on his profile, nothing else.</p>
+    <a class="btn btn-lg" href="https://www.linkedin.com/in/nelsoninno/" rel="noopener" target="_blank">Follow Nelson on LinkedIn</a>
   </div>
 </section>
 
@@ -76,7 +85,6 @@
       <li><strong>Read with a pen.</strong> Mark the moments that surprise you. The book is meant to be argued with.</li>
       <li><strong>Try the <a href="../insights/practical-applications/">practical applications</a></strong> in each chapter, they're short exercises, not theory.</li>
       <li><strong>If you find it useful, leave a review on <a href="https://geni.us/UnstableInnovation" rel="noopener">Amazon</a></strong>. For indie books, your review is the single biggest lever for reaching the next reader.</li>
-      <li><strong>Stay in touch on <a href="https://www.linkedin.com/in/nelsoninno/" rel="noopener">LinkedIn</a></strong>, that's where Nelson posts the unfiltered version of what he's working on.</li>
     </ol>
   </div>
 </section>
@@ -99,8 +107,8 @@
   </div>
 </section>
 
-<div id="site-footer-mount"></div>
-<script src="../assets/js/partials.js?v=11" defer></script>
+<footer class="site-footer"><div class="container"><div class="site-footer__grid"><div><a href="../" class="site-logo" style="color:#fff"><img src="../assets/images/og/unstable-innovation-logo-vector-nelson-inno.svg" alt="Unstable Innovation" width="38" height="38" style="filter:brightness(0) invert(1)"></a><p style="margin-top:16px;max-width:36ch;color:#a8a8a8;font-size:14px;">A book about innovation, entrepreneurship, and philosophy by Nelson Inno. Published by WeSpark.</p></div><div><h5>The book</h5><ul><li><a href="../buy/">Buy on Amazon</a></li><li><a href="../get/">Free PDF / EPUB</a></li><li><a href="../reviews/">Reader reviews</a></li><li><a href="../who-is-it-for/">Who is it for?</a></li><li><a href="../faq/">FAQ</a></li><li><a href="../insights/">Insights</a></li></ul></div><div><h5>The author</h5><ul><li><a href="../author/">About Nelson Inno</a></li><li><a href="https://nelsoninno.com" rel="noopener">nelsoninno.com</a></li><li><a href="https://wespark.io" rel="noopener">WeSpark</a></li><li><a href="https://yourownterms.life" rel="noopener">Your Own Terms</a></li></ul></div><div><h5>Connect</h5><ul><li><a href="https://www.linkedin.com/in/nelsoninno/" rel="noopener">LinkedIn</a></li><li><a href="https://youtu.be/trEo4g7MIUU" rel="noopener">TEDx talk</a></li><li><a href="https://geyser.fund/project/unstableinnovation" rel="noopener">Geyser Fund</a></li><li><a href="../resources/">Resources</a></li></ul></div></div><div class="site-footer__made-with-love" style="display:flex; align-items:center; justify-content:center; gap:10px; padding:18px 0 6px; border-top:1px solid rgba(255,255,255,0.08); flex-wrap:wrap; color:#a8a8a8; font-size:13px;"><span>Made with love, by</span><a href="https://everybodyknowsyou.com/" rel="noopener" target="_blank" aria-label="Everybodyknowsyou.com" style="display:inline-flex; align-items:center; gap:8px; color:#fff; text-decoration:none; line-height:1;"><img src="../assets/images/logos-featured-on/eky-logo-complete-forblackbackground.png" alt="Everybodyknowsyou.com logo" width="170" height="32" loading="lazy" style="height:32px; width:auto; display:block;"><span>everybodyknowsyou.com</span></a></div><div class="site-footer__bottom"><span>© <span data-year>2026</span> Nelson Inno. Published by WeSpark.</span><span>Built in El Salvador · Hosted on Cloudflare</span></div></div></footer>
+<script src="../assets/js/partials.js?v=12" defer></script>
 <script src="../assets/js/main.js?v=8" defer></script>
 <script>
   // Show personalized greeting if name was passed in URL

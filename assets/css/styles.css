@@ -396,13 +396,18 @@ h4 { font-size: var(--type-h4); }
   padding: 80px var(--pad-page);
   text-align: center;
 }
-.hero h1 {
+.hero h1,
+.hero .hero__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
   color: #fff;
   font-size: clamp(56px, 9vw, 120px);
   line-height: 0.96;
   margin-bottom: 24px;
 }
-.hero h1 .accent { color: var(--color-accent); }
+.hero h1 .accent, .hero .hero__title .accent { color: var(--color-accent); }
 .hero__sub {
   font-size: clamp(18px, 2vw, 22px);
   max-width: 720px;
@@ -1278,8 +1283,11 @@ html[lang="es"] .site-nav a {
 }
 
 
-/* Hero pre-headline eyebrow: small, centered, discoverability-friendly, above H1 */
-.hero__eyebrow {
+/* Hero pre-headline line: small, centered. Since Oct 2026 this IS the page H1
+   (a plain sentence saying what the book is), while the big visual phrase
+   below it is a styled paragraph (.hero__title). */
+.hero__eyebrow,
+.hero h1.hero__eyebrow {
   display: block;
   font-size: 11px;
   font-weight: 500;
@@ -1292,7 +1300,20 @@ html[lang="es"] .site-nav a {
   line-height: 1.4;
   text-align: center;
 }
+h1.hero__eyebrow,
+html[lang] .hero h1.hero__eyebrow {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.5;
+  max-width: 68ch;
+  color: rgba(255,255,255,0.82);
+}
 @media (max-width: 720px) {
+  h1.hero__eyebrow,
+  html[lang] .hero h1.hero__eyebrow { font-size: 12.5px; }
   .hero__eyebrow {
     font-size: 10px;
     letter-spacing: 0.3px;

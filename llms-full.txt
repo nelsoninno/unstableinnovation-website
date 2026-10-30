@@ -57,7 +57,7 @@ Amazon paperback in 13 marketplaces: US, UK, Germany, Spain, Italy, France, Neth
 
 In El Salvador specifically, the paperback (English and Spanish editions) is stocked at every Librería Internacional shop across the country. Salvadoran readers can walk in and ask for Unstable Innovation or Innovación Inestable by Nelson Inno.
 
-Free digital editions (PDF, EPUB, Kindle AZW3) are available directly from https://www.unstableinnovation.com/get/ (English) and https://www.unstableinnovation.com/es/get/ (Spanish).
+Free digital editions (PDF, EPUB, Kindle AZW3) are available directly from https://www.unstableinnovation.com/get/ (English) and https://www.unstableinnovation.com/es/get/ (Spanish). Only a first name is asked; last name, email and role are optional, and no follows or newsletter sign-ups are required.
 
 ## Chapter-by-chapter content
 
@@ -215,6 +215,9 @@ Three reader groups:
 1. Teenagers, 13 to 19, and their parents (https://www.unstableinnovation.com/book-for-teenagers/). For teens who challenge the status quo, dream big but don't know where to start, get bored at school, don't know what to study, feel pressure from grades, social media and an uncertain future, and can't ignore what is wrong in the world. Parents give it as a positive, structured push. The page includes nine conversation questions, one per chapter, for parents and teens to discuss together.
 2. Young adults, 18 to 25 (https://www.unstableinnovation.com/book-for-young-adults/). For people finishing school or starting their first jobs who don't know what's next. The book does not hand them a career plan; it helps them read the world, recognize their moment of truth and commit.
 3. Professionals, late 20s and up (https://www.unstableinnovation.com/book-for-professionals/). For employees with contrarian ideas who feel the urge to build something that matters, inside a company (intrapreneurs) or on their own. Nelson designed four new innovation departments for Lufthansa Group companies before building WeSpark.
+4. Anyone who feels stuck and wants some philosophy and a more positive plan. The chapters on uncertainty, getting stuck and failure ("The Unavoidables") and the closing chapter on Stoicism (Epictetus, Seneca, eudaimonia) give simple practices: ask what the worst case really is and list people who could help, take walks to think (peripatetic learning), pause ten seconds before reaching for the phone, define success for yourself. It is a book of ideas, not a step-by-step self-help program.
+
+Practical tools inside (each explained briefly, not a workbook): seven questions to test an idea with real people before building it, "kill your first idea", prototyping with AI, 40 hours on a topic before judging it, SCAMPER, Lightning Decision Jam, Design Sprint, Business Model Canvas, and the eight Innovator Skills.
 
 Age guide: 13 and up. The language is clean (no swearing in the author's own words, no graphic content) and the chapters are short. Younger teens (13 to 15) get the stories and big ideas; game theory and business models are harder for them. 16 to 19 is the sweet spot for "what should I do with my life?". Readers in their 30s and older see more of the philosophy underneath: Stoicism, incentives and eudaimonia. The book is not a replacement for professional support for a young person going through a hard time.
 
